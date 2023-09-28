@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "./data";
 import FoodCard from "./FoodCard";
 import "./App.css";
@@ -16,6 +16,17 @@ function App() {
   const [menuItems, setMenuItem] = useState(data);
   const [categories, setCategories] = useState(allCategories);
   const [acitveCategory, setActiveCategory] = useState("");
+  const [groupedMenu, setGroupedMenu] = useState({});
+  useEffect(() => {
+    const grouped = {};
+    // eslint-disable-next-line array-callback-return
+    menuItems.map((item) => {
+      grouped[item.category] = grouped[item.category] || [];
+      grouped[item.category].push(item);
+    });
+    setGroupedMenu(grouped);
+  }, [menuItems]);
+  // console.log(groupedMenu);
   const filterItems = (category) => {
     setActiveCategory(category);
     if (category === "All DAY MENU") {
@@ -40,7 +51,7 @@ function App() {
           acitveCategory={acitveCategory}
           filterItems={filterItems}
         />
-        <FoodCard items={menuItems} acitveCategory={acitveCategory} />
+        <FoodCard groupedMenu={groupedMenu} acitveCategory={acitveCategory} />
       </div>
     </div>
   );
