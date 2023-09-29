@@ -17,7 +17,23 @@ function App() {
   const [groupedMenu, setGroupedMenu] = useState({});
   const [isVegan, setIsVegan] = useState(false);
 
+  // Effect to filter menu items based on isVegan and activeCategory
   useEffect(() => {
+    const filteredData = data.filter((item) => {
+      if (activeCategory === "All DAY MENU") {
+        return isVegan ? item.vegan === true : true;
+      } else {
+        return (
+          activeCategory === item.category &&
+          (isVegan ? item.vegan === true : true)
+        );
+      }
+    });
+    setMenuItem(filteredData);
+  }, [isVegan, activeCategory]);
+
+  useEffect(() => {
+    // Group menu items by category
     const grouped = {};
     menuItems.forEach((item) => {
       grouped[item.category] = grouped[item.category] || [];
@@ -26,34 +42,12 @@ function App() {
     setGroupedMenu(grouped);
   }, [menuItems]);
 
-  useEffect(() => {
-    // Filter menu items based on the vegan filter when isVegan changes
-    const filteredData = isVegan
-      ? menuItems.filter((item) => item.vegan === true)
-      : menuItems;
-    setMenuItem(filteredData);
-  }, [isVegan]);
-
   const filterItems = (category) => {
     setActiveCategory(category);
-
-    if (category === "All DAY MENU") {
-      // If "All DAY MENU" is selected, show items based on the vegan filter
-      const filteredData = isVegan
-        ? data.filter((item) => item.vegan === true)
-        : data;
-      setMenuItem(filteredData);
-    } else {
-      const newItems = data.filter((item) => item.category === category);
-      const filteredData = isVegan
-        ? newItems.filter((item) => item.vegan === true)
-        : newItems;
-      setMenuItem(filteredData);
-    }
   };
-  console.log(isVegan);
-  const handleVegan = (value) => {
-    setIsVegan(value);
+
+  const handleVegan = () => {
+    setIsVegan(!isVegan);
   };
 
   return (
