@@ -5,6 +5,7 @@ const FoodCard = ({ groupedMenu, acitveCategory }) => {
     <>
       <h1>{acitveCategory}</h1>
       {/* <div className="food_cards"> */}
+
       <div>
         {Object.entries(groupedMenu).map(([category, items]) => (
           <div>
