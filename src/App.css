@@ -2,13 +2,20 @@ body{
   margin:0;
   font-family: 'Fira Sans', sans-serif;
 }
+.dietary{
+  margin: 0;
+  width: 100vw;
+  height: 6vh;
+  
+  display: flex;
+  flex-direction: row;
+}
 .menu{
   margin: 0 3vw;
   text-align: center;
 }
 .subMenu{
 display: flex;
-
 }
 .food_cards {
   display: grid;

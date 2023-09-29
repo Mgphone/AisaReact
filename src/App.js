@@ -13,7 +13,7 @@ const allCategories = [
 function App() {
   const [menuItems, setMenuItem] = useState(data);
   const [categories, setCategories] = useState(allCategories);
-  const [activeCategory, setActiveCategory] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All DAY MENU");
   const [groupedMenu, setGroupedMenu] = useState({});
   const [isVegan, setIsVegan] = useState(false);
 

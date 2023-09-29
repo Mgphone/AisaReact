@@ -6,9 +6,11 @@ function Dietary({ handleVegan }) {
       <label htmlFor="veganCheckbox">Vegan</label>
       <input
         type="checkbox"
-        onChange={(e) => {
-          handleVegan(e.target.checked);
-        }}
+        // onChange={(e) => {
+        //   handleVegan(e.target.checked);
+        // }}
+        id="checkbox"
+        onChange={handleVegan}
       />
     </div>
   );
