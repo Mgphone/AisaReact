@@ -1,0 +1,29 @@
+.categories{
+  width: 100%;
+  overflow: hidden;
+}
+.button-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
+.filter_btn {
+  /* Common styles for both active and inactive buttons */
+  padding: 5px 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.filter_btn.active {
+  background-color: #02101f; 
+  color: #fff;
+}
+.filter_btn:hover{
+background-color: #ccc;
+color: black;
+}

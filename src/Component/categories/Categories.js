@@ -1,21 +1,21 @@
 import React from "react";
-
-function Categories({ categories, filterItems, acitveCategory }) {
+import "./Categories.css";
+function Categories({ categories, filterItems, activeCategory }) {
   return (
-    <>
-      {categories.map((item, index) => (
-        <button
-          type="button"
-          className={`${
-            acitveCategory === item ? "filter_btn.active" : "filter_btn"
-          }`}
-          key={index}
-          onClick={() => filterItems(item)}
-        >
-          {item}
-        </button>
-      ))}
-    </>
+    <div className="categories">
+      <div className="button-container">
+        {categories.map((item, index) => (
+          <button
+            type="button"
+            className={`filter_btn ${activeCategory === item ? "active" : ""}`}
+            key={index}
+            onClick={() => filterItems(item)}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
 

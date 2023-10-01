@@ -626,6 +626,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/San_Pellegrino_Blood_Orange.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 52,
@@ -635,6 +636,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/San_Pellegrino_Lemon.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 53,
@@ -644,6 +646,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Coca_Cola_Can.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 54,
@@ -653,6 +656,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Coca_Cola_Can.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 55,
@@ -662,6 +666,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Coca_Cola_Can.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 56,
@@ -671,6 +676,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Coca_Cola_Can.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 57,
@@ -680,6 +686,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Coca_Cola_Can.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 58,
@@ -689,6 +696,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Still_Water.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 59,
@@ -698,6 +706,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Sparkling_Water.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 60,
@@ -707,6 +716,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/Aloe_Vera_500_Ml.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 61,
@@ -716,6 +726,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/San_Pellegrino_Blood_Orange.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 62,
@@ -725,6 +736,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/San_Pellegrino_Blood_Orange.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 63,
@@ -734,6 +746,7 @@ const data = [
     category: "SOFT DRINKS & JUICES",
     image: "/Photos/San_Pellegrino_Blood_Orange.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 64,
@@ -743,6 +756,7 @@ const data = [
     category: "HOT DRINKS",
     image: "/Photos/Jasmine_Tea.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 65,
@@ -752,6 +766,7 @@ const data = [
     category: "HOT DRINKS",
     image: "/Photos/Green_Tea.jpeg",
     available: true,
+    vegan: true,
   },
   {
     id: 66,

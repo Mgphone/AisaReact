@@ -25,6 +25,7 @@ function Dietary({ handleVegan, isVegan }) {
         <BootStrapSwitchButton />
         <label>Vegetarian</label>
       </div>
+
       {/* <Switch isVegan={isVegan} handleVegan={handleVegan} /> */}
 
       {/* <label htmlFor="veganCheckbox" className="switch">
