@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import data from "./data";
-import FoodCard from "./FoodCard";
+import data from "../Services/data";
+import FoodCard from "./foodCard/FoodCard";
 import "./App.css";
-import Categories from "./Categories";
-import Dietary from "./Dietary";
+import Categories from "./categories/Categories";
+import Dietary from "./dietary/Dietary.js";
 
 const allCategories = [
   "All DAY MENU",
@@ -52,9 +52,8 @@ function App() {
 
   return (
     <div className="App">
+      <Dietary handleVegan={handleVegan} isVegan={isVegan} />
       <div className="menu">
-        <h1>Food Menu</h1>
-        <Dietary handleVegan={handleVegan} />
         <Categories
           categories={categories}
           activeCategory={activeCategory}

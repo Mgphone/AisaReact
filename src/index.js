@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import Nav from "./Nav";
-import Background from "./Background";
+import App from "./Component/App";
+import Nav from "./Component/NavBar/Nav";
+import Background from "./Component/background/Background";
 ReactDOM.render(
   <React.StrictMode>
     <Nav />
