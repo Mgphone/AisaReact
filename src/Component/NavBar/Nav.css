@@ -12,6 +12,7 @@
 
 .logo img {
   max-height: 5vw; /* Set a max height for the logo */
+  max-width: 15vw;
 }
 
 .tabs a {

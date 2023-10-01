@@ -16,7 +16,6 @@ function App() {
   const [activeCategory, setActiveCategory] = useState("All DAY MENU");
   const [groupedMenu, setGroupedMenu] = useState({});
   const [isVegan, setIsVegan] = useState(false);
-
   // Effect to filter menu items based on isVegan and activeCategory
   useEffect(() => {
     const filteredData = data.filter((item) => {
@@ -53,12 +52,12 @@ function App() {
   return (
     <div className="App">
       <Dietary handleVegan={handleVegan} isVegan={isVegan} />
+      <Categories
+        categories={categories}
+        activeCategory={activeCategory}
+        filterItems={filterItems}
+      />
       <div className="menu">
-        <Categories
-          categories={categories}
-          activeCategory={activeCategory}
-          filterItems={filterItems}
-        />
         <FoodCard groupedMenu={groupedMenu} activeCategory={activeCategory} />
       </div>
     </div>
