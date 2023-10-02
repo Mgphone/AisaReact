@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Dietary from "../dietary/Dietary";
+import "./Autohiddendiv.css";
 function AutoHiddendiv({ handleVegan, isVegan }) {
   const [isHidden, setIsHidden] = useState(true);
   const toggleVisible = () => {

@@ -1,0 +1,27 @@
+/* Styling for the auto-hidden-div container */
+.auto-hidden-div {
+  margin: 20px;
+}
+
+/* Styling for the button */
+.auto-hidden-div button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styling for the content div */
+.auto-hidden-div .content {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin-top: 10px;
+}
+
+/* Hide the content when isHidden is true */
+.auto-hidden-div .content.hidden {
+  display: none;
+}

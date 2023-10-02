@@ -8,7 +8,7 @@ import Background from "./Component/background/Background";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 ReactDOM.render(
   <React.StrictMode>
-    <Background />
+    {/* <Background /> */}
     <Nav />
     <App />
   </React.StrictMode>,
