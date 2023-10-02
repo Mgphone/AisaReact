@@ -3,7 +3,8 @@ import data from "../Services/data";
 import FoodCard from "./foodCard/FoodCard";
 import "./App.css";
 import Categories from "./categories/Categories";
-import Dietary from "./dietary/Dietary.js";
+// import Dietary from "./dietary/Dietary.js";
+import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
 import Welcome from "./welcome/Welcome";
 const allCategories = [
   "All DAY MENU",
@@ -52,7 +53,8 @@ function App() {
   return (
     <div className="App">
       <Welcome />
-      <Dietary handleVegan={handleVegan} isVegan={isVegan} />
+      <AutoHiddendiv handleVegan={handleVegan} isVegan={isVegan} />
+      {/* <Dietary handleVegan={handleVegan} isVegan={isVegan} /> */}
       <Categories
         categories={categories}
         activeCategory={activeCategory}
