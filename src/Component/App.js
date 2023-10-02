@@ -4,7 +4,7 @@ import FoodCard from "./foodCard/FoodCard";
 import "./App.css";
 import Categories from "./categories/Categories";
 import Dietary from "./dietary/Dietary.js";
-
+import Welcome from "./welcome/Welcome";
 const allCategories = [
   "All DAY MENU",
   ...new Set(data.map((item) => item.category)),
@@ -51,6 +51,7 @@ function App() {
 
   return (
     <div className="App">
+      <Welcome />
       <Dietary handleVegan={handleVegan} isVegan={isVegan} />
       <Categories
         categories={categories}

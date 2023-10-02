@@ -10,6 +10,9 @@ function Nav() {
         <a href="/">Home</a>
         <a href="/menu">Menu</a>
         <a href="/about">Location</a>
+        <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
+          <button>Order</button>
+        </a>
       </div>
     </nav>
   );

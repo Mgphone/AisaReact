@@ -10,20 +10,23 @@
 
 
 .filter_btn {
-  /* Common styles for both active and inactive buttons */
-  padding: 5px 5px;
+  padding: 5px;
   border: 1px solid #ccc;
   background-color: #fff;
   color: #333;
   cursor: pointer;
   margin: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .filter_btn.active {
-  background-color: #02101f; 
+  background-color: #02101f;
   color: #fff;
 }
-.filter_btn:hover{
-background-color: #ccc;
-color: black;
+
+.filter_btn:hover {
+  background-color: #ccc;
+  color: black;
 }
+
+

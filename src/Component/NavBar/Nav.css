@@ -7,21 +7,33 @@
   padding:0;
   width: 100%;
   font-size:3vw;
-  margin: 0;
- }
+  position:fixed;
+  z-index: 1;
 
+ }
+ .navbar button{
+  font-size:3vw;
+  background-color: #e5007e;
+  border-radius: 10%;
+ }
+ .navbar a:hover{
+  text-decoration: underline;
+ }
+.navbar button:hover{
+  background-color: #ef66ad
+}
 .logo img {
-  max-height: 5vw; /* Set a max height for the logo */
-  max-width: 15vw;
+  max-height: 15vh; 
+  max-width: 20vw;
 }
 
 .tabs a {
   text-decoration: none;
   color: #fff;
-  margin-right: 20px; /* Add spacing between tabs */
+  margin-right: 10vw; /* Add spacing between tabs */
 }
 
 /* Style the last tab differently */
 .tabs a:last-child {
-  margin-right: 10; /* Remove margin for the last tab */
+   margin-right: 10; 
 }
