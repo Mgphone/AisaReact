@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   color:white;
+  flex-grow: 1;
 }
 
 .Vegan {
@@ -37,8 +38,10 @@
   transform: translateY(-5px); 
 }
 
+
 .food_card h3 {
   margin: 0;
+  color:#ff5733;
 }
 
 .food_card_image img {
@@ -46,37 +49,42 @@
   max-width: 70%;
   /* height: auto;  */
 }
-.food_card .contains{
+.contains{
   color: #bbb;
 }
 .food_card button{
   background-color: #e5007e;
   width: 15vw;
   color: white;
+  margin: 1em 0;
 }
 .food_card button:hover{
   background-color: #ef66ad
 }
 @media only screen and (max-width:600px){
-  /* Style for the food card container */
-/* Style for the food card */
-/* Style for the food card */
+
+/* Base styles for the food card */
 .food_card {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   background-color: #333;
   color: white;
   padding: 10px;
   margin-top: 10px;
-  border:1px solid white;
+  border: 1px solid white;
+  transition: transform 0.3s ease-in-out;
+}
 
+/* Hover effect for the food card */
+.food_card:hover {
+  transform: scale(1.05); /* Enlarge the card slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
 }
 
 /* Style for the food card image */
 .food_card_image {
-  max-width:25em; /* Adjust the image width as needed */
-   max-height:25em;/* Maintain aspect ratio */
+  width: 150px; /* Set a fixed width for the image */
+  height: 150px; /* Set a fixed height for the image */
   padding: 0;
   margin: 0;
   object-fit: cover;
@@ -84,17 +92,12 @@
 
 /* Style for the food card text container */
 .food_card_text {
- 
-  display: flex; /* Use flexbox to control the layout of text content */
-  flex-direction: column; /* Stack text content vertically */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
   color: white;
   text-align: left;
-}
-.food_card_text h3{
-  color: #e5007e;
-}
-.contains{
- align-items: left;
 }
 
 /* Style for the Vegan label */
@@ -107,7 +110,6 @@
 
 /* Style for the Non-Vegan label */
 .something {
-  /* background-color: red; */
   color: white;
   padding: 5px;
   border-radius: 3px;
@@ -128,12 +130,13 @@
 .food_card p {
   margin: 0;
 }
-.food_card button{
+
+.food_card button {
   background-color: #5e0536;
- margin-top: 10px;
 }
-.food_card button:hover{
-  background-color: #ef66ad
+
+.food_card button:hover {
+  background-color: #ef66ad;
 }
 
 /* Add more styles as needed for your specific design */
