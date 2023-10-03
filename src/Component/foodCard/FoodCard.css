@@ -64,28 +64,37 @@
 .food_card {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   background-color: #333;
   color: white;
   padding: 10px;
   margin-top: 10px;
   border:1px solid white;
+
 }
 
 /* Style for the food card image */
 .food_card_image {
-  width: 50%; /* Adjust the image width as needed */
-  max-height: 100%; /* Maintain aspect ratio */
+  max-width:25em; /* Adjust the image width as needed */
+   max-height:25em;/* Maintain aspect ratio */
   padding: 0;
   margin: 0;
+  object-fit: cover;
 }
 
 /* Style for the food card text container */
 .food_card_text {
-  flex: 1;
+ 
   display: flex; /* Use flexbox to control the layout of text content */
   flex-direction: column; /* Stack text content vertically */
-  padding-left: 10px;
   color: white;
+  text-align: left;
+}
+.food_card_text h3{
+  color: #e5007e;
+}
+.contains{
+ align-items: left;
 }
 
 /* Style for the Vegan label */
@@ -121,6 +130,7 @@
 }
 .food_card button{
   background-color: #5e0536;
+ margin-top: 10px;
 }
 .food_card button:hover{
   background-color: #ef66ad

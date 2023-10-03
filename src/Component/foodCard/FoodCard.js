@@ -24,25 +24,25 @@ const FoodCard = ({ groupedMenu, activeCategory }) => {
               <div className="food_cards">
                 {items.map((item) => (
                   <div className="food_card" key={item.id}>
-                    <div className="food_card_image">
-                      <img src={item.image} alt={item.title} />
-                    </div>
                     <div className="food_card_text">
-                      {item.vegan ? (
-                        <div className="Vegan">Vg</div>
-                      ) : (
-                        <div className="something"></div>
-                      )}
                       <h3>{item.title}</h3>
                       <h5>{item.description}</h5>
                       <p>
                         <span className="contains">Contains</span>{" "}
                         {item.contains}
                       </p>
+                      {item.vegan ? (
+                        <div className="Vegan">Vg</div>
+                      ) : (
+                        <div className="something"></div>
+                      )}
                       <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
                         <button>Order</button>
                       </a>
                       {/* Add any other information you want to display */}
+                    </div>
+                    <div className="food_card_image">
+                      <img src={item.image} alt={item.title} />
                     </div>
                   </div>
                 ))}
