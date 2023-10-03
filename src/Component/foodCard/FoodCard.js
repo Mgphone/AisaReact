@@ -33,11 +33,12 @@ const FoodCard = ({ groupedMenu, activeCategory }) => {
                       ) : (
                         <div className="something"></div>
                       )}
-                      <h3>
-                        {item.id}.{item.title}
-                      </h3>
+                      <h3>{item.title}</h3>
                       <h5>{item.description}</h5>
-                      <p>{item.contains}</p>
+                      <p>
+                        <span className="contains">Contains</span>{" "}
+                        {item.contains}
+                      </p>
                       <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
                         <button>Order</button>
                       </a>

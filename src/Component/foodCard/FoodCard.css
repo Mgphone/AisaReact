@@ -1,6 +1,6 @@
 .food_card {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 10px;
@@ -9,17 +9,25 @@
   border-radius: 20px;
 }
 .food_card_text{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color:white;
 }
-.Vegan{
+
+.Vegan {
   height: 1.5em;
   width: 1.5em;
-  color: white;
   font-size: 1em;
   background-color: green;
+  display: flex; /* Use flexbox for centering within the .food_card_text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
-.something{
+
+
+.food_card_text .something{
   height: 1.5em;
   width: 1.5em;
   
@@ -38,8 +46,12 @@
   max-width: 70%;
   /* height: auto;  */
 }
+.food_card .contains{
+  color: #bbb;
+}
 .food_card button{
   background-color: #e5007e;
+  width: 15vw;
 }
 .food_card button:hover{
   background-color: #ef66ad
@@ -50,6 +62,7 @@
 /* Style for the food card */
 .food_card {
   display: flex;
+  flex-direction: row;
   background-color: #333;
   color: white;
   padding: 10px;
@@ -59,7 +72,7 @@
 
 /* Style for the food card image */
 .food_card_image {
-  width: 30%; /* Adjust the image width as needed */
+  width: 50%; /* Adjust the image width as needed */
   max-height: 100%; /* Maintain aspect ratio */
   padding: 0;
   margin: 0;
@@ -84,7 +97,7 @@
 
 /* Style for the Non-Vegan label */
 .something {
-  background-color: red;
+  /* background-color: red; */
   color: white;
   padding: 5px;
   border-radius: 3px;
