@@ -101,6 +101,7 @@
   color: white;
   padding: 5px;
   border-radius: 3px;
+  z-index: 2;
 }
 
 /* Additional styling for the rest of the food card content */
@@ -118,7 +119,7 @@
   margin: 0;
 }
 .food_card button{
-  background-color: #e5007e;
+  background-color: #5e0536;
 }
 .food_card button:hover{
   background-color: #ef66ad

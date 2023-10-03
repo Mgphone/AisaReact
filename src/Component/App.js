@@ -53,13 +53,15 @@ function App() {
   return (
     <div className="App">
       <Welcome />
-      <AutoHiddendiv handleVegan={handleVegan} isVegan={isVegan} />
-      {/* <Dietary handleVegan={handleVegan} isVegan={isVegan} /> */}
-      <Categories
-        categories={categories}
-        activeCategory={activeCategory}
-        filterItems={filterItems}
-      />
+      <div className="stickyMenu">
+        <AutoHiddendiv handleVegan={handleVegan} isVegan={isVegan} />
+        {/* <Dietary handleVegan={handleVegan} isVegan={isVegan} /> */}
+        <Categories
+          categories={categories}
+          activeCategory={activeCategory}
+          filterItems={filterItems}
+        />
+      </div>
       <div className="menu">
         <FoodCard groupedMenu={groupedMenu} activeCategory={activeCategory} />
       </div>

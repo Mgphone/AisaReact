@@ -8,7 +8,11 @@ body{
   background-color: black;
   color: white;
 }
-
+.stickyMenu{
+  position: sticky;
+  top:6em;
+  background-color: transparent;
+}
 .menu{
   margin: 0 3vw;
   text-align: center;
