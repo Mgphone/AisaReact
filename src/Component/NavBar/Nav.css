@@ -9,6 +9,7 @@
   font-size:3vw;
   position:fixed;
   z-index: 1;
+  height: 15vh;
 
  }
  .navbar button{
@@ -26,6 +27,8 @@
 .logo img {
   max-height: 15vh; 
   max-width: 20vw;
+  margin: 0;
+  padding: 0;
 }
 
 .tabs a {

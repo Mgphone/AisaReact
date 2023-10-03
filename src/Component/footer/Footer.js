@@ -24,12 +24,11 @@ function Footer() {
       </div>
       <div className="footer-row">
         <div className="footer-icons">
-          <FontAwesomeIcon icon={faFacebook} />
-          <FontAwesomeIcon icon={faInstagram} />
           <FaFacebook />
           <FaInstagram />
         </div>
       </div>
+      {/* <p className="copyright">Copyright</p> */}
     </footer>
   );
 }

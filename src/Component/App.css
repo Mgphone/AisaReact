@@ -10,7 +10,7 @@ body{
 }
 .stickyMenu{
   position: sticky;
-  top:6em;
+  top:15vh;
   background-color: transparent;
 }
 .menu{
