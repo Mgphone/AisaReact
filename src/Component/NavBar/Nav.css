@@ -15,6 +15,7 @@
   font-size:3vw;
   background-color: #e5007e;
   border-radius: 10%;
+  color: white;
  }
  .navbar a:hover{
   text-decoration: underline;
@@ -36,4 +37,13 @@
 /* Style the last tab differently */
 .tabs a:last-child {
    margin-right: 10; 
+}
+@media screen and (max-width:600px){
+  .navbar{
+    font-size: 4vw;
+  }
+  .tabs a{
+    text-decoration: none;
+    color:#fff;
+  }
 }

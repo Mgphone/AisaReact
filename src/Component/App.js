@@ -6,6 +6,7 @@ import Categories from "./categories/Categories";
 // import Dietary from "./dietary/Dietary.js";
 import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
 import Welcome from "./welcome/Welcome";
+import Footer from "./footer/Footer";
 const allCategories = [
   "All DAY MENU",
   ...new Set(data.map((item) => item.category)),
@@ -65,6 +66,7 @@ function App() {
       <div className="menu">
         <FoodCard groupedMenu={groupedMenu} activeCategory={activeCategory} />
       </div>
+      <Footer />
     </div>
   );
 }

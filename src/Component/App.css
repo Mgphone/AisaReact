@@ -29,5 +29,8 @@ body{
 .category{
   text-decoration-line: underline;
 }
+@media screen (max-width:600px){
+  
+}
 
 

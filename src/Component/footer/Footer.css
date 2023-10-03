@@ -1,0 +1,28 @@
+ footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: ;
+  border-top: 1px solid white;
+  /* margin: 0 15vw; */
+
+}
+
+.footer-row{
+  /* flex: 1; */
+  margin:0 2vw;
+  text-align: left;
+}
+.footer-image img{
+  max-width: 3em;
+} 
+.footer-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  font-size: 3em;
+  color: #e5007e;
+  margin-right: 5vw;
+}
+

@@ -1,35 +1,17 @@
-/* .Dietary{
-  width: 100vw;
-  height: 8vh;
-  background-color:black;
-  color:white
-  
-}
-.Dietary>.switch{
-  display: flex;
-gap: 10px;
-}
-.Dietary>.switch>label{
-  display: inline-block;
-} */
-/* Styling for the Dietary component */
+
 .Dietary {
   width: 100%;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   padding: 10px;
-  /* margin-top: 40px; */
 }
 
-/* Styling for the switch container */
+
 .Dietary .switch {
   display: flex;
-  align-items: center;
   gap: 10px;
-  /* margin-top: 10px; */
 }
 
-/* Styling for the label next to the switch */
 .Dietary .switch label {
-  font-size: 18px;
+  font-size: 1em;
 }

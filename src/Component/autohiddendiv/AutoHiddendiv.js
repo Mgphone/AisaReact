@@ -7,8 +7,10 @@ function AutoHiddendiv({ handleVegan, isVegan }) {
     setIsHidden(!isHidden);
   };
   return (
-    <div>
-      <button onClick={toggleVisible}>Dietary</button>
+    <div className="autohiddendiv">
+      <button onClick={toggleVisible}>
+        {isHidden ? "Dietary⬇️" : "Dietary⬆️"}
+      </button>
       {!isHidden && <Dietary handleVegan={handleVegan} isVegan={isVegan} />}
     </div>
   );

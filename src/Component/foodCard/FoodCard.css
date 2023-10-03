@@ -52,6 +52,7 @@
 .food_card button{
   background-color: #e5007e;
   width: 15vw;
+  color: white;
 }
 .food_card button:hover{
   background-color: #ef66ad
