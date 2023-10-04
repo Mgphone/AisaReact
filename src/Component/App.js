@@ -7,6 +7,7 @@ import Categories from "./categories/Categories";
 import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
 import Welcome from "./welcome/Welcome";
 import Footer from "./footer/Footer";
+import CategoryBar from "./categoryBar/CategoryBar";
 const allCategories = [
   "All DAY MENU",
   ...new Set(data.map((item) => item.category)),
@@ -56,12 +57,13 @@ function App() {
       <Welcome />
       <div className="stickyMenu">
         <AutoHiddendiv handleVegan={handleVegan} isVegan={isVegan} />
+        <CategoryBar groupedMenu={groupedMenu} />
         {/* <Dietary handleVegan={handleVegan} isVegan={isVegan} /> */}
-        <Categories
+        {/* <Categories
           categories={categories}
           activeCategory={activeCategory}
           filterItems={filterItems}
-        />
+        /> */}
       </div>
       <div className="menu">
         <FoodCard groupedMenu={groupedMenu} activeCategory={activeCategory} />

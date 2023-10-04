@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./FoodCard.css";
 
 const FoodCard = ({ groupedMenu, activeCategory }) => {
   // console.log(Object.entries(groupedMenu).length);
   // console.log("Active Category " + activeCategory);
+
   return (
     <>
       {/* <h1>{activeCategory}</h1> */}
@@ -18,7 +19,7 @@ const FoodCard = ({ groupedMenu, activeCategory }) => {
           </div>
         ) : (
           Object.entries(groupedMenu).map(([category, items]) => (
-            <div key={category}>
+            <div id={category} key={category}>
               <h2>{category}</h2>
               {/* <div key={category}> */}
               <div className="food_cards">
@@ -32,7 +33,7 @@ const FoodCard = ({ groupedMenu, activeCategory }) => {
                         {item.contains}
                       </p>
                       {item.vegan ? (
-                        <div className="Vegan">Vg</div>
+                        <div className="Vegan">Vegan</div>
                       ) : (
                         <div className="something"></div>
                       )}

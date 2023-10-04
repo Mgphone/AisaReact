@@ -1,3 +1,7 @@
+.category{
+  position:fixed;
+  top:25vh;
+}
 .food_card {
   display: flex;
   flex-direction: column;
@@ -19,7 +23,7 @@
 
 .Vegan {
   height: 1.5em;
-  width: 1.5em;
+  width: 3.5em;
   font-size: 1em;
   background-color: green;
   display: flex; /* Use flexbox for centering within the .food_card_text */
@@ -54,9 +58,11 @@
 }
 .food_card button{
   background-color: #e5007e;
-  width: 15vw;
+  width: 30vw;
+  height: 5vh;
   color: white;
   margin: 1em 0;
+  border-radius: 10%;
 }
 .food_card button:hover{
   background-color: #ef66ad

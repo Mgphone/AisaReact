@@ -13,10 +13,11 @@
 
  }
  .navbar button{
-  font-size:3vw;
+  font-size:3.5vw;
   background-color: #e5007e;
   border-radius: 10%;
   color: white;
+  max-width: 15vw;
  }
  .navbar a:hover{
   text-decoration: underline;
