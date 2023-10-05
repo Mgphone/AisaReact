@@ -1,4 +1,4 @@
-.category{
+.categories{
   width: 100%;
   overflow: hidden;
 }
@@ -6,4 +6,7 @@
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+}
+.button-container button a.active{
+  background-color:#e5007e;
 }
