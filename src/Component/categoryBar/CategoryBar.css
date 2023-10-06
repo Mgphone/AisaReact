@@ -6,8 +6,14 @@
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+  gap: 10px;
+  
 }
 
-.button-container button a.active{
+.button-default{
+  background-color: #ccc;
+}
+.button-active{
   background-color:#e5007e;
+  order: -1;
 }
