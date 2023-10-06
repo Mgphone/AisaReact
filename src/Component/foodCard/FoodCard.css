@@ -56,9 +56,10 @@
 .contains{
   color: #bbb;
 }
+
 .food_card button{
   background-color: #e5007e;
-  width: 30vw;
+  width: 15vw;
   height: 5vh;
   color: white;
   margin: 1em 0;
@@ -138,7 +139,11 @@
 }
 
 .food_card button {
-  background-color: #5e0536;
+  background-color: #e5007e;
+height: 5vh;
+ 
+  width: 20vw;
+  
 }
 
 .food_card button:hover {

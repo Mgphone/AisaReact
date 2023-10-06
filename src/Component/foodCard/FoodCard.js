@@ -28,8 +28,8 @@ const FoodCard = ({ groupedMenu, activeCategory }) => {
                     <div className="food_card_text">
                       <h3>{item.title}</h3>
                       <h5>{item.description}</h5>
-                      <p>
-                        <span className="contains">Contains</span>{" "}
+                      <p className="contains_container)">
+                        <span className="contains">Contains: </span>
                         {item.contains}
                       </p>
                       {item.vegan ? (

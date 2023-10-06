@@ -24,8 +24,20 @@ function Footer() {
       </div>
       <div className="footer-row">
         <div className="footer-icons">
-          <FaFacebook />
-          <FaInstagram />
+          <a
+            href="https://www.facebook.com/asiavilla11"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://www.instagram.com/asiavilla__/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
         </div>
       </div>
       {/* <p className="copyright">Copyright</p> */}

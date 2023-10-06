@@ -62,11 +62,12 @@
 // }
 
 // export default CategoryBar;
-import React from "react";
+import React, { useState } from "react";
 import "./CategoryBar.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 function CategoryBar({ groupedMenu }) {
   const categoryBar = Object.keys(groupedMenu);
+
   return (
     <div>
       <div className="categories">
