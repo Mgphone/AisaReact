@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <Nav />
-      <Welcome />
+      <Welcome imageUrl={"/Images/PHOTO-2021-10-26-11-35-13 (1).jpg"} />
 
       <div className="overlay-text">
         <h1>Fun Fact</h1>
