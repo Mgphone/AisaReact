@@ -8,6 +8,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 2vw;
   padding: 1vw;
+  overflow: hidden;
 }
 .category{
   position:fixed;
@@ -23,11 +24,14 @@
   border:1px solid white;
   border-radius: 20px;
 }
+.food_card:hover{
+  transform: translateY(-5px);
+}
 .food_card_text{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   color:white;
   flex-grow: 1;
 }
@@ -40,6 +44,9 @@
   display: flex; /* Use flexbox for centering within the .food_card_text */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
+  margin-bottom: 3px;
+  transform: rotate(-5deg);
+  margin-right: 2vw;
 }
 
 
@@ -54,21 +61,22 @@
 }
 
 
-.food_card h3 {
+.food_card_title {
+  line-height: 1em;
   margin: 0;
   color:#ff5733;
 }
 
 .food_card_image img {
-  width: 70%; 
-  max-width: 70%;
+  width: 250px; 
+  /* max-width: 70%; */
   /* height: auto;  */
 }
 .contains{
   color: #bbb;
 }
 
-.food_card button{
+/* .food_card button{
   background-color: #e5007e;
   width: 15vw;
   height: 5vh;
@@ -78,10 +86,11 @@
 }
 .food_card button:hover{
   background-color: #ef66ad
-}
+} */
 @media only screen and (max-width:600px){
 
 /* Base styles for the food card */
+
 .food_card {
   display: flex;
   flex-direction: row;
@@ -100,7 +109,7 @@
 }
 
 /* Style for the food card image */
-.food_card_image {
+.food_card_image img {
   width: 150px; /* Set a fixed width for the image */
   height: 150px; /* Set a fixed height for the image */
   padding: 0;
@@ -135,9 +144,11 @@
 }
 
 /* Additional styling for the rest of the food card content */
-.food_card h3 {
+.food_card h2 {
   font-size: 1.2em;
   margin: 0;
+  color:#ff5733;
+  line-height: 1em;
 }
 
 .food_card h5 {
@@ -149,7 +160,7 @@
   margin: 0;
 }
 
-.food_card button {
+/* .food_card button {
   background-color: #e5007e;
 height: 5vh;
  
@@ -159,7 +170,7 @@ height: 5vh;
 
 .food_card button:hover {
   background-color: #ef66ad;
-}
+} */
 
 /* Add more styles as needed for your specific design */
 

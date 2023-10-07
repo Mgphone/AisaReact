@@ -1,5 +1,6 @@
 import React from "react";
 import "./FoodCards.css";
+import CutWord from "./cutWord/CutWord";
 
 const FoodCards = ({ groupedMenu, activeCategory }) => {
   // console.log(Object.entries(groupedMenu).length);
@@ -26,9 +27,12 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                 {items.map((item) => (
                   <div className="food_card" key={item.id}>
                     <div className="food_card_text">
-                      <h3>{item.title}</h3>
-                      <h5>{item.description}</h5>
-                      <p className="contains_container)">
+                      <h2 className="food_card_title">{item.title}</h2>
+                      <p className="food_card_description">
+                        {/* {item.description} */}
+                        <CutWord text={item.description} maxLength={85} />
+                      </p>
+                      <p className="food_card_contain)">
                         <span className="contains">Contains: </span>
                         {item.contains}
                       </p>
@@ -37,9 +41,9 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                       ) : (
                         <div className="something"></div>
                       )}
-                      <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
+                      {/* <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
                         <button>Order</button>
-                      </a>
+                      </a> */}
                       {/* Add any other information you want to display */}
                     </div>
                     <div className="food_card_image">
