@@ -1,7 +1,13 @@
-.menu{
-  margin: 0 3vw;
+.menu_foodcards{
+  margin: 0 auto;
   text-align: center;
   
+}
+.food_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2vw;
+  padding: 1vw;
 }
 .category{
   position:fixed;

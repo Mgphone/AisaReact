@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import data from "../Services/data";
-import FoodCard from "./foodCard/FoodCards";
-import "./App.css";
-import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
-import Welcome from "./welcome/Welcome";
-import Footer from "./footer/Footer";
-import CategoryBar from "./categoryBar/CategoryBar";
-import Nav from "./NavBar/Nav";
-import FoodCards from "./foodCard/FoodCards";
+import AutoHiddendiv from "../Component/Menu/autohiddendiv/AutoHiddendiv";
+import Welcome from "../Component/Menu/welcome/Welcome";
+import Footer from "../Component/footer/Footer";
+import Nav from "../Component/NavBar/Nav";
+import FoodCards from "../Component/Menu/foodCard/FoodCards";
 
-function App() {
+function Menu() {
   const [menuItems, setMenuItem] = useState(data);
   const [activeCategory, setActiveCategory] = useState(menuItems);
   const [groupedMenu, setGroupedMenu] = useState({});
@@ -48,7 +45,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="menu">
       <Nav />
       <Welcome />
       <AutoHiddendiv
@@ -62,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default Menu;

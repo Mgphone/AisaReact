@@ -3,10 +3,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   /* border-top: 3px solid white; */
   margin: 2vh 15vw;
-
+  color:white;
 }
 
 .footer-row{

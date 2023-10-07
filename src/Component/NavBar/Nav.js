@@ -1,18 +1,28 @@
 import React from "react";
+import { BrowserRouter, Router, Routes, Link } from "react-router-dom";
+
 import "./Nav.css";
 function Nav() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="/Photos/Asia Villa-1.png" alt="Logo" />
+        <Link to="/">
+          <img src="/Photos/Asia Villa-1.png" alt="Logo" />
+        </Link>
       </div>
       <div className="tabs">
-        <a href="/">Home</a>
-        <a href="/menu">Menu</a>
+        <Link to="/">Home</Link>
+        <Link to="/menu">Menu</Link>
+        {/* <Link to="/location">Location</Link> */}
+        <Link to="https://asiavilla.app4food.co.uk/Home/Outlets">
+          <button>Order</button>
+        </Link>
+
+        {/* <a href="/menu">Menu</a>
         <a href="/about">Location</a>
         <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
           <button>Order</button>
-        </a>
+        </a> */}
       </div>
     </nav>
   );
