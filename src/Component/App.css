@@ -14,11 +14,7 @@ body{
   background-color: transparent;
   z-index: 1;
 }
-.menu{
-  margin: 0 3vw;
-  text-align: center;
-  
-}
+
 
 .food_cards {
   display: grid;

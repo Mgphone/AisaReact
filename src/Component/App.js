@@ -1,28 +1,23 @@
 import React, { useEffect, useState } from "react";
 import data from "../Services/data";
-import FoodCard from "./foodCard/FoodCard";
+import FoodCard from "./foodCard/FoodCards";
 import "./App.css";
-import Categories from "./categories/Categories";
-// import Dietary from "./dietary/Dietary.js";
 import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
 import Welcome from "./welcome/Welcome";
 import Footer from "./footer/Footer";
 import CategoryBar from "./categoryBar/CategoryBar";
-const allCategories = [
-  "All DAY MENU",
-  ...new Set(data.map((item) => item.category)),
-];
+import Nav from "./NavBar/Nav";
+import FoodCards from "./foodCard/FoodCards";
 
 function App() {
   const [menuItems, setMenuItem] = useState(data);
-  const [categories, setCategories] = useState(allCategories);
-  const [activeCategory, setActiveCategory] = useState("All DAY MENU");
+  const [activeCategory, setActiveCategory] = useState(menuItems);
   const [groupedMenu, setGroupedMenu] = useState({});
   const [isVegan, setIsVegan] = useState(false);
   // Effect to filter menu items based on isVegan and activeCategory
   useEffect(() => {
     const filteredData = data.filter((item) => {
-      if (activeCategory === "All DAY MENU") {
+      if (activeCategory) {
         return isVegan ? item.vegan === true : true;
       } else {
         return (
@@ -44,9 +39,9 @@ function App() {
     setGroupedMenu(grouped);
   }, [menuItems]);
 
-  const filterItems = (category) => {
-    setActiveCategory(category);
-  };
+  // const filterItems = (category) => {
+  //   setActiveCategory(category);
+  // };
 
   const handleVegan = () => {
     setIsVegan(!isVegan);
@@ -54,20 +49,14 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <Welcome />
-      <div className="stickyMenu">
-        <AutoHiddendiv handleVegan={handleVegan} isVegan={isVegan} />
-        <CategoryBar groupedMenu={groupedMenu} />
-        {/* <Dietary handleVegan={handleVegan} isVegan={isVegan} /> */}
-        {/* <Categories
-          categories={categories}
-          activeCategory={activeCategory}
-          filterItems={filterItems}
-        /> */}
-      </div>
-      <div className="menu">
-        <FoodCard groupedMenu={groupedMenu} activeCategory={activeCategory} />
-      </div>
+      <AutoHiddendiv
+        handleVegan={handleVegan}
+        isVegan={isVegan}
+        groupedMenu={groupedMenu}
+      />
+      <FoodCards groupedMenu={groupedMenu} activeCategory={activeCategory} />
       <Footer />
     </div>
   );

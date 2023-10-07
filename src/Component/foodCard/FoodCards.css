@@ -1,3 +1,8 @@
+.menu{
+  margin: 0 3vw;
+  text-align: center;
+  
+}
 .category{
   position:fixed;
   top:25vh;

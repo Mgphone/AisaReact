@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./FoodCard.css";
+import React from "react";
+import "./FoodCards.css";
 
-const FoodCard = ({ groupedMenu, activeCategory }) => {
+const FoodCards = ({ groupedMenu, activeCategory }) => {
   // console.log(Object.entries(groupedMenu).length);
   // console.log("Active Category " + activeCategory);
 
@@ -10,7 +10,7 @@ const FoodCard = ({ groupedMenu, activeCategory }) => {
       {/* <h1>{activeCategory}</h1> */}
       {/* <div className="food_cards"> */}
 
-      <div>
+      <div className="menu">
         {Object.entries(groupedMenu).length === 0 ? (
           <div className="food_card">
             <h5>🙏</h5>
@@ -56,4 +56,4 @@ const FoodCard = ({ groupedMenu, activeCategory }) => {
   );
 };
 
-export default FoodCard;
+export default FoodCards;
