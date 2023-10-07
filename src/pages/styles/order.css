@@ -1,0 +1,27 @@
+
+.middleimage img{
+  width: 50px;
+  filter: grayscale(70%);
+}
+body{
+  background-color:white;
+  color:black;
+}
+.order{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 2px solid red;
+padding-top:25vh;
+padding-bottom: 10vh;
+}
+.image-container img{
+  display: flex;
+  width: 100px;
+  margin: 0;
+}
+footer{
+ 
+  color:black;
+}

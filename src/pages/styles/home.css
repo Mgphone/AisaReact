@@ -18,4 +18,6 @@ body{
   object-fit: fill;
   top: 0;
  bottom: 0;
+ /* filter: grayscale(20%); */
+
 }

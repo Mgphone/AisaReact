@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FoodCards.css";
 import CutWord from "./cutWord/CutWord";
 
 const FoodCards = ({ groupedMenu, activeCategory }) => {
   // console.log(Object.entries(groupedMenu).length);
   // console.log("Active Category " + activeCategory);
-
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [toggleOpen.settoggleOpen]=useState('')
   return (
     <>
       {/* <h1>{activeCategory}</h1> */}

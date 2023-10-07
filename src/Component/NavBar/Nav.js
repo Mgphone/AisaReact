@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Router, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./Nav.css";
 function Nav() {
@@ -14,7 +14,7 @@ function Nav() {
         <Link to="/">Home</Link>
         <Link to="/menu">Menu</Link>
         {/* <Link to="/location">Location</Link> */}
-        <Link to="https://asiavilla.app4food.co.uk/Home/Outlets">
+        <Link to="/order">
           <button>Order</button>
         </Link>
 
