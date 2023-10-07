@@ -62,7 +62,7 @@
 // }
 
 // export default CategoryBar;
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CategoryBar.css";
 import { Link, animateScroll as scroll } from "react-scroll";
 function CategoryBar({ groupedMenu }) {
@@ -71,6 +71,30 @@ function CategoryBar({ groupedMenu }) {
   const handleButtonActive = (to) => {
     setAciveButton(to);
   };
+
+  useEffect(() => {
+    // When the active button changes, scroll to ensure it's in view
+    if (activeButton) {
+      const container = document.querySelector(".button-container");
+      // const activeButtonElement = document.querySelector(
+      //   `[to='${activeButton}']`
+      // );
+      const activeButtonElement = document.querySelector(".button-active");
+      if (container && activeButtonElement) {
+        const containerWidth = container.clientWidth;
+        const activeButtonLeft = activeButtonElement.offsetLeft;
+        const activeButtonWidth = activeButtonElement.offsetWidth;
+
+        // Calculate the scroll position to center the active button
+        const scrollLeft =
+          activeButtonLeft - containerWidth / 2 + activeButtonWidth / 2;
+
+        // Scroll to the calculated position
+        container.scrollLeft = scrollLeft;
+      }
+    }
+  }, [activeButton]);
+
   return (
     <div>
       <div className="categories">

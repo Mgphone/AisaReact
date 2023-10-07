@@ -13,3 +13,19 @@ change to vegan...tofu
 green curry contains...
 red curry contains...
 ...bottom
+
+I did have big problem on the middle of the display categoryBar.
+useEffect...to mount in
+check the activeButton on the usestate ..document.queryseclector(the whole button div)
+and the whole div of ButtonElement by using DOM ..document.queryselector(inside className)
+after that find the width of the whole buttons div
+active button..width offsetWidth the whole actual element width
+offsetLeft two eleements difference
+You encountered an issue with the middle display of the categoryBar.
+
+You used the useEffect hook to run code when the component mounts.
+You stored the active button's information in the activeButton state variable.
+You used document.querySelector to select the entire button container div and the individual button elements inside it.
+You calculated the width of the entire button container div.
+You measured the width of the active button using offsetWidth.
+You used offsetLeft to find the horizontal difference between two elements, which can help with positioning.
