@@ -1,19 +1,38 @@
-.categories{
+.categories {
   width: 100%;
   overflow: hidden;
 }
+
 .button-container {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
   gap: 10px;
-  
+  padding: 10px;
 }
 
-.button-default{
+.button-default {
   background-color: #ccc;
+  padding: 1vh 2vh;
+  border-radius: 10%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
-.button-active{
-  background-color:#e5007e;
-  /* order: -1; */
+
+.button-default:hover {
+  background-color: #999;
+  transform: scale(1.05);
+}
+
+.button-active {
+  background-color: #e5007e;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-active:hover {
+  background-color: #ff007e;
+  transform: scale(1.25);
 }

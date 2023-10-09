@@ -7,6 +7,20 @@ body{
   background-color:white;
   color:black;
 }
+
+.linkContainerStyle{
+  flex:1;
+  width: 65vw;
+  height: 10vh;
+  margin-top: 3vh;
+  background-color:lightblue;
+  line-height: 2vh;
+  text-align: center;
+  cursor: pointer;
+}
+.linkContainerStyle p{
+  line-height: 1em;
+}
 .order{
 display: flex;
 flex-direction: column;
@@ -15,6 +29,7 @@ align-items: center;
 border: 2px solid red;
 padding-top:25vh;
 padding-bottom: 10vh;
+background: linear-gradient(-30deg,green,pink);
 }
 .image-container img{
   display: flex;

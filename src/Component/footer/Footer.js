@@ -21,6 +21,7 @@ function Footer() {
             we become culinary demons in the kitchen, creating unforgettable
             flavors and experiences for your palate.
           </p>
+          <p className="credit">Crafter with ♥️♥️ from MgPhone</p>
         </div>
       </div>
       <div className="footer-row">

@@ -17,6 +17,10 @@
   top: 0;
  bottom: 0;
 }
+/*This is for home image*/
+.home_welcome{
+filter: grayscale(70%);
+}
 
 
 .overlay-text {

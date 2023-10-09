@@ -47,7 +47,7 @@ function Menu() {
   return (
     <div className="menu">
       <Nav />
-      <Welcome imageUrl="/Images/welcomeasia.png" />
+      <Welcome imageUrl="/Images/welcomeasia.png" className="centered-image" />
       <AutoHiddendiv
         handleVegan={handleVegan}
         isVegan={isVegan}

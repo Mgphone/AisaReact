@@ -48,7 +48,12 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                       {/* Add any other information you want to display */}
                     </div>
                     <div className="food_card_image">
-                      <img src={item.image} alt={item.title} />
+                      {/* <img src={item.image} alt={item.title} /> */}
+                      {item.image ? (
+                        <img src={item.image} alt={item.title} />
+                      ) : (
+                        <img src="/Photos/noimage.jpg" alt={item.title} />
+                      )}
                     </div>
                   </div>
                 ))}

@@ -9,7 +9,7 @@ function Welcome(props) {
       <img
         src={props.imageUrl}
         alt="Welcome Asia"
-        className="centered-image"
+        className={props.className}
         width="100%"
         height="100%"
       />

@@ -4,8 +4,8 @@
   justify-content: space-between;
   align-items: center;
   /* border-top: 3px solid white; */
-  margin: 2vh 15vw;
-  color:white;
+  /* margin: 2vh 15vw; */
+  background-color:#ddd;
 }
 
 .footer-row{
@@ -32,6 +32,16 @@
   align-items: center;
   justify-content: center;
 }
+footer{
+  margin: 0;
+  padding:0;
+}
+.footer-paragraph p{
+  font-size: 1em;
+}
+.footer-paragraph .credit{
+  font-size: 0.5em;
+}
 @media (max-width:600px) {
   footer{
     margin: 0;
@@ -40,5 +50,6 @@
   .footer-paragraph p{
     font-size: 0.5em;
   }
+  
 }
 
