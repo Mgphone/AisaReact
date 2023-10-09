@@ -7,6 +7,11 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
   // console.log("Active Category " + activeCategory);
   // const [isOpen, setIsOpen] = useState(false);
   // const [toggleOpen.settoggleOpen]=useState('')
+  // const [openItem, setOpenItem] = useState(null);
+  // console.log(openItem);
+  const handleclick = (item) => {
+    alert("You click " + item.title);
+  };
   return (
     <>
       {/* <h1>{activeCategory}</h1> */}
@@ -26,7 +31,12 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
               {/* <div key={category}> */}
               <div className="food_cards">
                 {items.map((item) => (
-                  <div className="food_card" key={item.id}>
+                  <button
+                    className="food_card"
+                    key={item.id}
+                    // onClick={() => setOpenItem(item)}
+                    onClick={() => handleclick(item)}
+                  >
                     <div className="food_card_text">
                       <h2 className="food_card_title">{item.title}</h2>
                       <p className="food_card_description">
@@ -55,7 +65,7 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                         <img src="/Photos/noimage.jpg" alt={item.title} />
                       )}
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>

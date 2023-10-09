@@ -3,7 +3,7 @@ import "./Footer.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 // Use free-brands-svg-icons
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -31,14 +31,21 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFacebook />
+            <FaFacebook color="#e5007e" />
           </a>
           <a
             href="https://www.instagram.com/asiavilla__/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram />
+            <FaInstagram color="e5007e" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@asiavilla?_t=8gNNqR3NevR&_r=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok color="e5007e" />
           </a>
         </div>
       </div>
