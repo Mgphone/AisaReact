@@ -27,6 +27,7 @@ function Order() {
     // <Link to={link}></Link>;
     window.location.href = `${link}`;
   };
+  const storeSorted = [...store].sort((a, b) => a.No - b.No);
 
   return (
     <>
@@ -40,7 +41,7 @@ function Order() {
             alt="Background"
           /> */}
         </div>
-        {store.map((item) => (
+        {storeSorted.map((item) => (
           <div
             key={item.id}
             className="linkContainerStyle"
