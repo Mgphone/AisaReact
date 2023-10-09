@@ -1,22 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./Nav.css";
 function Nav() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">
+        <NavLink to="/" activeClassName="active">
           <img src="/Photos/Asia Villa-1.png" alt="Logo" />
-        </Link>
+        </NavLink>
       </div>
       <div className="tabs">
-        <Link to="/">Home</Link>
-        <Link to="/menu">Menu</Link>
+        <NavLink to="/" activeClassName="active">
+          Home
+        </NavLink>
+        <NavLink to="/menu" activeClassName="active">
+          Menu
+        </NavLink>
         {/* <Link to="/location">Location</Link> */}
-        <Link to="/order">
+        <NavLink to="/order" activeClassName="active">
           <button>Order</button>
-        </Link>
+        </NavLink>
 
         {/* <a href="/menu">Menu</a>
         <a href="/about">Location</a>

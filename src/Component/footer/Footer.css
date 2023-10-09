@@ -39,8 +39,8 @@ footer{
 .footer-paragraph p{
   font-size: 1em;
 }
-.footer-paragraph .credit{
-  font-size: 0.5em;
+.footer-paragraph p .credit{
+  font-size: 0.2em;
 }
 @media (max-width:600px) {
   footer{
@@ -50,6 +50,7 @@ footer{
   .footer-paragraph p{
     font-size: 0.5em;
   }
+ 
   
 }
 
