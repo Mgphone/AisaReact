@@ -110,8 +110,8 @@
 
 /* Style for the food card image */
 .food_card_image img {
-  width: 150px; /* Set a fixed width for the image */
-  height: 150px; /* Set a fixed height for the image */
+  width: 100px; /* Set a fixed width for the image */
+  height: 100px; /* Set a fixed height for the image */
   padding: 0;
   margin: 0;
   object-fit: cover;

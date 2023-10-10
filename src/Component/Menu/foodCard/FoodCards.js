@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FoodCards.css";
 import CutWord from "./cutWord/CutWord";
+import Popup from "./Popup";
 
 const FoodCards = ({ groupedMenu, activeCategory }) => {
   // console.log(Object.entries(groupedMenu).length);
@@ -9,8 +10,19 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
   // const [toggleOpen.settoggleOpen]=useState('')
   // const [openItem, setOpenItem] = useState(null);
   // console.log(openItem);
-  const handleclick = (item) => {
-    alert("You click " + item.title);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [popupData, setPopupData] = useState("");
+  //testing for title
+  // const handleclick = (item) => {
+  //   alert("You click " + item.title);
+  // };
+  const openPopup = (item) => {
+    setPopupData(item);
+    setIsOpen(true);
+  };
+  const closePopup = () => {
+    setIsOpen(false);
   };
   return (
     <>
@@ -34,8 +46,8 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                   <button
                     className="food_card"
                     key={item.id}
-                    // onClick={() => setOpenItem(item)}
-                    onClick={() => handleclick(item)}
+                    // onClick={() => handleclick(item)}
+                    onClick={() => openPopup(item)}
                   >
                     <div className="food_card_text">
                       <h2 className="food_card_title">{item.title}</h2>
@@ -43,19 +55,19 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                         {/* {item.description} */}
                         <CutWord text={item.description} maxLength={85} />
                       </p>
-                      <p className="food_card_contain)">
-                        <span className="contains">Contains: </span>
-                        {item.contains}
-                      </p>
+                      {item.contains ? (
+                        <p className="food_card_contain)">
+                          <span className="contains">Contains: </span>
+                          {item.contains}
+                        </p>
+                      ) : (
+                        ""
+                      )}
                       {item.vegan ? (
                         <div className="Vegan">Vegan</div>
                       ) : (
                         <div className="something"></div>
                       )}
-                      {/* <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
-                        <button>Order</button>
-                      </a> */}
-                      {/* Add any other information you want to display */}
                     </div>
                     <div className="food_card_image">
                       {/* <img src={item.image} alt={item.title} /> */}
@@ -67,6 +79,12 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                     </div>
                   </button>
                 ))}
+                <Popup
+                  isOpen={isOpen}
+                  item={popupData}
+                  closePopup={closePopup}
+                  clickOutside={true}
+                />
               </div>
             </div>
           ))

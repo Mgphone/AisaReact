@@ -20,13 +20,14 @@ import "./styles/order.css";
 import Nav from "../Component/NavBar/Nav";
 import Footer from "../Component/footer/Footer";
 import store from "../Services/store";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 function Order() {
   const handleLinkClick = (link) => {
     // alert(`Clicked on ${link} I Know what you are trying🫵😂`);
     // <Link to={link}></Link>;
     window.location.href = `${link}`;
   };
+
   const storeSorted = [...store].sort((a, b) => a.No - b.No);
 
   return (

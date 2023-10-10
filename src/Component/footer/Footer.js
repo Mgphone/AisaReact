@@ -38,14 +38,14 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram color="e5007e" />
+            <FaInstagram color="#e5007e" />
           </a>
           <a
             href="https://www.tiktok.com/@asiavilla?_t=8gNNqR3NevR&_r=1"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTiktok color="e5007e" />
+            <FaTiktok color="#e5007e" />
           </a>
         </div>
       </div>
