@@ -1,12 +1,14 @@
 const store = [
   {
     No: 2,
-    Name: "Borough",
+    Name: "BOROUGH",
     Address: "302 Borough High Street, Borough, London SE1 1JJ",
     Link: "https://deliveroo.co.uk/menu/london/borough/asia-villa-borough-high-street",
     tel: "02074075301",
     Opening: "10.00AM",
     Closing: "11.00PM",
+    lat: 51.49966027660743,
+    lng: -0.09641193226200846,
   },
   {
     No: 1,
@@ -16,6 +18,8 @@ const store = [
     tel: "02085524488",
     Opening: "12.00PM",
     Closing: "10.00PM",
+    lat: 51.54260363374026,
+    lng: 0.036935625412983814,
   },
   {
     No: 3,
@@ -25,6 +29,8 @@ const store = [
     tel: "02036892619",
     Opening: "10.00AM",
     Closing: "12.00AM",
+    lat: 51.511722897555906,
+    lng: -0.009332689932862655,
   },
   {
     No: 4,
@@ -34,6 +40,8 @@ const store = [
     tel: "01708500705",
     Opening: "10.00AM",
     Closing: "11.00PM",
+    lat: 51.574845622290994,
+    lng: 0.1856502965794885,
   },
   {
     No: 6,
@@ -43,6 +51,8 @@ const store = [
     tel: "02088856176",
     Opening: "10.00AM",
     Closing: "11.00PM",
+    lat: 51.598211087506144,
+    lng: -0.09149663225465664,
   },
   {
     No: 5,
@@ -52,6 +62,8 @@ const store = [
     tel: "02078372880",
     Opening: "12.00PM",
     Closing: "10.00PM",
+    lat: 51.530166284097795,
+    lng: -0.1054906034238478,
   },
 ];
 export default store;
