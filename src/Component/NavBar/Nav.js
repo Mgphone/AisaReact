@@ -17,16 +17,10 @@ function Nav() {
         <NavLink to="/menu" activeClassName="active">
           Menu
         </NavLink>
-        {/* <Link to="/location">Location</Link> */}
+        <NavLink to="/location">Location</NavLink>
         <NavLink to="/order" activeClassName="active">
           <button>Order</button>
         </NavLink>
-
-        {/* <a href="/menu">Menu</a>
-        <a href="/about">Location</a>
-        <a href="https://asiavilla.app4food.co.uk/Home/Outlets">
-          <button>Order</button>
-        </a> */}
       </div>
     </nav>
   );

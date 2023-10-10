@@ -48,7 +48,7 @@ p:hover{
 }
  .popup_vegan{
   background-color: green;
-  max-width: 5vw;
+  max-width: 6vw;
   transform: rotate(-5deg);
 }
 
@@ -78,5 +78,8 @@ p:hover{
     max-width: 80%;
     height: auto;
     margin-bottom: 1em;
+  }
+  .popup_vegan{
+    max-width: 15vw;
   }
 }

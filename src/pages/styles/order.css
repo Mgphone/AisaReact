@@ -17,6 +17,7 @@ body{
   line-height: 2vh;
   text-align: center;
   cursor: pointer;
+  /* background: linear-gradient(90deg,#e5007e,#9beaef); */
 }
 .linkContainerStyle p{
   line-height: 1em;
@@ -25,7 +26,7 @@ body{
   /* transform: scale(1.1); */
   transform: translateX(5px);
   animation: shake 0.5s ease-in-out infinite;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 @keyframes shake{
   0%,100%{
@@ -46,17 +47,35 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-border: 2px solid red;
+/* border: 2px solid red; */
 padding-top:25vh;
 padding-bottom: 10vh;
-background: linear-gradient(-30deg,green,pink);
+  background: linear-gradient(90deg,#e5007e,#35b8b2);
 }
-.image-container img{
+.image-container {
   display: flex;
-  width: 100px;
-  margin: 0;
+}
+.image1{
+  width: 10vw;
+  margin-right: 1vw;
+}
+.image2{
+  max-width: 15vw;
+}
+.image1:hover,.image2:hover{
+ transform: scale(1.2);
+
 }
 footer{
  
   color:black;
+}
+@media (max-width:600px) {
+  .image1{
+    width: 20vw;
+    margin-right: 1vw;
+  }
+  .image2{
+    max-width: 30vw;
+  }
 }
