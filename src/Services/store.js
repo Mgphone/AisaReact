@@ -1,4 +1,4 @@
-const store = [
+const stores = [
   {
     No: 2,
     Name: "BOROUGH",
@@ -66,4 +66,4 @@ const store = [
     lng: -0.1054906034238478,
   },
 ];
-export default store;
+export default stores;

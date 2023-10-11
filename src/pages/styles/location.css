@@ -7,6 +7,23 @@
  filter:grayscale(80%);
 
 }
+/* .searchstore{
+  padding-bottom: 15vh;
+ height: 30vh;
+ width: 100vw;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap:10px;
+ font-size: 2em;
+} */
+.restaurant{
+
+ margin:0 auto;
+ font-size: 1em;
+}
+
 @media (max-width:600px) {
   .staticMap img{
     /* width: 100vw; */
