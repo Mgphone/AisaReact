@@ -45,7 +45,6 @@ function SearchStore() {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     const distanceInKilometers = R * c;
 
-    // Convert kilometers to miles (1 kilometer ≈ 0.621371 miles).
     const distanceInMiles = distanceInKilometers * 0.621371;
 
     return distanceInMiles;
@@ -75,30 +74,29 @@ function SearchStore() {
 
       setUserCoordinates(userCoordinate);
 
-      // Now that you have the user's coordinates, you can find the nearest stores.
-      const storesWithinRadius = stores.filter((store) => {
-        const distance = calculateDistanceInMiles(userCoordinates, {
-          lat: store.lat,
-          lng: store.lng,
+      if (userCoordinate) {
+        const storesWithinRadius = stores.filter((store) => {
+          const distance = calculateDistanceInMiles(userCoordinate, {
+            lat: store.lat,
+            lng: store.lng,
+          });
+          return distance <= 5; // Stores within 5 miles.
         });
 
-        return distance <= 5; // Stores within 5 miles.
-      });
-
-      // Update the nearestStores state with the list of stores within 5 miles.
-      storesWithinRadius.sort((a, b) => {
-        const distanceA = calculateDistanceInMiles(userCoordinates, {
-          lat: a.lat,
-          lng: a.lng,
+        // Update the nearestStores state with the list of stores within 5 miles.
+        storesWithinRadius.sort((a, b) => {
+          const distanceA = calculateDistanceInMiles(userCoordinate, {
+            lat: a.lat,
+            lng: a.lng,
+          });
+          const distanceB = calculateDistanceInMiles(userCoordinate, {
+            lat: b.lat,
+            lng: b.lng,
+          });
+          return distanceA - distanceB;
         });
-        const distanceB = calculateDistanceInMiles(userCoordinates, {
-          lat: b.lat,
-          lng: b.lng,
-        });
-        return distanceA - distanceB;
-      });
-      setNearestStores(storesWithinRadius);
-      // console.log(nearestStores);
+        setNearestStores(storesWithinRadius);
+      }
     } catch (error) {
       console.log(error);
     } finally {
@@ -120,8 +118,8 @@ function SearchStore() {
       {isLoading && <p>Loading...</p>}
       {nearestStores.length > 0 ? (
         // Content to display after clicking the button (list of stores, etc.)
-        <div>
-          <h2>Restaurants Within 5 Miles:</h2>
+        <div className="searchrestaurant">
+          <h2>find a nearest restaurant</h2>
           <ul>
             {nearestStores.map((store, index) => (
               <li key={index}>

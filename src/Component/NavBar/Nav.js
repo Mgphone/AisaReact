@@ -17,7 +17,7 @@ function Nav() {
         <NavLink to="/menu" activeClassName="active">
           Menu
         </NavLink>
-        <NavLink to="/location">Location</NavLink>
+        <NavLink to="/location">Locations</NavLink>
         <NavLink to="/order" activeClassName="active">
           <button>Order</button>
         </NavLink>

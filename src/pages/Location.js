@@ -9,11 +9,11 @@ import SearchStore from "../Component/location/SearchStore";
 function Location() {
   return (
     <div>
-      {/* <Nav /> */}
+      <Nav />
 
-      {/* <StaticMap locations={store} /> */}
+      <StaticMap locations={stores} />
       <SearchStore locations={stores} />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
