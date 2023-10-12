@@ -7,8 +7,9 @@ function SearchStore() {
   const [userCoordinates, setUserCoordinates] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [autocomplete, setAutocomplete] = useState(null);
+  const [resultMessage, setResultMessage] = useState(false);
   const api = process.env.REACT_APP_GOOGLE_API_KEY;
-
+  console.log(nearestStores);
   useEffect(() => {
     const inputElement = document.getElementById("autocomplete-input");
 
@@ -56,7 +57,6 @@ function SearchStore() {
     try {
       const timestamp = new Date().getTime();
 
-      console.log("neareststore" + nearestStores);
       const geoLocationResponse = await fetch(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${userLocation}&key=${api}&timestamp=${timestamp}`
       );
@@ -75,27 +75,33 @@ function SearchStore() {
       setUserCoordinates(userCoordinate);
 
       if (userCoordinate) {
-        const storesWithinRadius = stores.filter((store) => {
+        const storesWithinRadius = stores.map((store) => {
           const distance = calculateDistanceInMiles(userCoordinate, {
             lat: store.lat,
             lng: store.lng,
           });
-          return distance <= 5; // Stores within 5 miles.
+          if (distance <= 5) {
+            return store;
+          }
+          return null;
         });
-
+        const newStore = storesWithinRadius.filter((store) => store !== null);
         // Update the nearestStores state with the list of stores within 5 miles.
-        storesWithinRadius.sort((a, b) => {
-          const distanceA = calculateDistanceInMiles(userCoordinate, {
-            lat: a.lat,
-            lng: a.lng,
-          });
-          const distanceB = calculateDistanceInMiles(userCoordinate, {
-            lat: b.lat,
-            lng: b.lng,
-          });
-          return distanceA - distanceB;
+        newStore.sort((a, b) => {
+          // const distanceA = calculateDistanceInMiles(userCoordinate, {
+          //   lat: a.lat,
+          //   lng: a.lng,
+          // });
+          // const distanceB = calculateDistanceInMiles(userCoordinate, {
+          //   lat: b.lat,
+          //   lng: b.lng,
+          // });
+          return a < b;
         });
-        setNearestStores(storesWithinRadius);
+        if (newStore.length === 0) {
+          setResultMessage(true);
+        }
+        setNearestStores(newStore);
       }
     } catch (error) {
       console.log(error);
@@ -105,7 +111,7 @@ function SearchStore() {
   };
 
   return (
-    <div className="searchstore">
+    <div className="searchContainer">
       <h1>Find Restaurants Within 5 Miles</h1>
       <input
         type="text"
@@ -116,6 +122,34 @@ function SearchStore() {
       />
       <button onClick={handleUserLocationInput}>Find</button>
       {isLoading && <p>Loading...</p>}
+
+      {/* {nearestStores.length > 0 &&
+        (nearestStores.length > 0 ? (
+          <div className="restaurantList">
+            <h2>Find a Nearest Restaurants</h2>
+            <ul>
+              {nearestStores.map((store, index) => (
+                <li key={index}>
+                  <p>Name: {store.Name}</p>
+                  <p>Address: {store.Address}</p>
+                  <p>
+                    Distance:{" "}
+                    {calculateDistanceInMiles(userCoordinates, {
+                      lat: store.lat,
+                      lng: store.lng,
+                    }).toFixed(2)}{" "}
+                    miles
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <div className="restaurantList">
+            <h2>FInd a Nearest Restaurants</h2>
+            <p>Sorry There is no restaurant</p>
+          </div>
+        ))} */}
       {nearestStores.length > 0 ? (
         // Content to display after clicking the button (list of stores, etc.)
         <div className="searchrestaurant">
@@ -138,7 +172,7 @@ function SearchStore() {
           </ul>
         </div>
       ) : (
-        <p>No result within 5miles</p>
+        resultMessage && <p>No result within 5 miles</p>
       )}
     </div>
   );
