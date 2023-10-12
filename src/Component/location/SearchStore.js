@@ -9,7 +9,6 @@ function SearchStore() {
   const [autocomplete, setAutocomplete] = useState(null);
   const [resultMessage, setResultMessage] = useState(false);
   const api = process.env.REACT_APP_GOOGLE_API_KEY;
-  console.log(nearestStores);
   useEffect(() => {
     const inputElement = document.getElementById("autocomplete-input");
 
@@ -73,7 +72,6 @@ function SearchStore() {
       }
 
       setUserCoordinates(userCoordinate);
-
       if (userCoordinate) {
         const storesWithinRadius = stores.map((store) => {
           const distance = calculateDistanceInMiles(userCoordinate, {
@@ -81,26 +79,16 @@ function SearchStore() {
             lng: store.lng,
           });
           if (distance <= 5) {
-            return store;
+            return {
+              ...store,
+              distance,
+            };
           }
           return null;
         });
         const newStore = storesWithinRadius.filter((store) => store !== null);
-        // Update the nearestStores state with the list of stores within 5 miles.
-        newStore.sort((a, b) => {
-          // const distanceA = calculateDistanceInMiles(userCoordinate, {
-          //   lat: a.lat,
-          //   lng: a.lng,
-          // });
-          // const distanceB = calculateDistanceInMiles(userCoordinate, {
-          //   lat: b.lat,
-          //   lng: b.lng,
-          // });
-          return a < b;
-        });
-        if (newStore.length === 0) {
-          setResultMessage(true);
-        }
+        newStore.sort((a, b) => a.distance - b.distance);
+
         setNearestStores(newStore);
       }
     } catch (error) {
@@ -108,10 +96,13 @@ function SearchStore() {
     } finally {
       setIsLoading(false);
     }
+    if (nearestStores.length === 0) {
+      setResultMessage(false);
+    }
   };
 
   return (
-    <div className="searchContainer">
+    <div className="searchcontainer">
       <h1>Find Restaurants Within 5 Miles</h1>
       <input
         type="text"
@@ -123,33 +114,6 @@ function SearchStore() {
       <button onClick={handleUserLocationInput}>Find</button>
       {isLoading && <p>Loading...</p>}
 
-      {/* {nearestStores.length > 0 &&
-        (nearestStores.length > 0 ? (
-          <div className="restaurantList">
-            <h2>Find a Nearest Restaurants</h2>
-            <ul>
-              {nearestStores.map((store, index) => (
-                <li key={index}>
-                  <p>Name: {store.Name}</p>
-                  <p>Address: {store.Address}</p>
-                  <p>
-                    Distance:{" "}
-                    {calculateDistanceInMiles(userCoordinates, {
-                      lat: store.lat,
-                      lng: store.lng,
-                    }).toFixed(2)}{" "}
-                    miles
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : (
-          <div className="restaurantList">
-            <h2>FInd a Nearest Restaurants</h2>
-            <p>Sorry There is no restaurant</p>
-          </div>
-        ))} */}
       {nearestStores.length > 0 ? (
         // Content to display after clicking the button (list of stores, etc.)
         <div className="searchrestaurant">
@@ -160,11 +124,12 @@ function SearchStore() {
                 <p>Name: {store.Name}</p>
                 <p>Address: {store.Address}</p>
                 <p>
-                  Distance:{" "}
+                  {/* Distance:{" "}
                   {calculateDistanceInMiles(userCoordinates, {
                     lat: store.lat,
                     lng: store.lng,
-                  }).toFixed(2)}{" "}
+                  }).toFixed(2)}{" "} */}
+                  Distance:{" " + store.distance.toFixed(2)}
                   miles
                 </p>
               </li>
