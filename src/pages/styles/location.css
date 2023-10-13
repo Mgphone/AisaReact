@@ -4,6 +4,10 @@
 }
 .searchcontainer{
   padding-top: 17vh;
+  width: 40vw;
+  /* padding:0 2vw; */
+  padding-left: 2vw;
+  padding-right:2vw;
  }
 .staticMap img{
   padding-top: 17vh;
@@ -17,6 +21,32 @@
  height: 100vh; */
  /* filter:grayscale(80%); */
 
+}
+.search-restaurant{
+  text-align: left;
+
+}
+.search-restaurant h1{
+  font-weight:bolder;
+  line-height: 1em;
+}
+.search-restaurant input{
+  width: 15vw;
+  height: 8vh;
+  font-size: larger;
+}
+.search-restaurant button{
+  height: 8vh;
+  width: 4vw;
+  background-color:#e5007e;
+
+}
+.search-restaurant button:hover{
+  background-color: #f13ea0;
+}
+.result-restaurant{
+  overflow: scroll;
+  height: 50vh;
 }
 
 /* .searchstore{
@@ -34,10 +64,12 @@
 @media (max-width:600px) {
   .searchcontainer{
    padding-top: 10vh;
+   /* width:100vw; */
   }
   .staticMap img{
     /* width: 100vw; */
     padding-top: 10vh;
+    /* width:60vw; */
     /* filter:grayscale(80%) */
   }
   

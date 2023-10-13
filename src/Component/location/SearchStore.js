@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import stores from "../../Services/store";
+import { FaAccusoft } from "react-icons/fa";
+import SearchByList from "./SearchByList";
 
 function SearchStore() {
   const [userLocation, setUserLocation] = useState("");
@@ -70,26 +72,38 @@ function SearchStore() {
       if (!userCoordinate) {
         throw new Error("Invalid address or location not found.");
       }
-
       setUserCoordinates(userCoordinate);
       if (userCoordinate) {
-        const storesWithinRadius = stores.map((store) => {
+        // const storesWithinRadius = stores.map((store) => {
+        //   const distance = calculateDistanceInMiles(userCoordinate, {
+        //     lat: store.lat,
+        //     lng: store.lng,
+        //   });
+        //   if (distance <= 5) {
+        //     return {
+        //       ...store,
+        //       distance,
+        //     };
+        //   }
+        //   return null;
+        // });
+        // const newStore = storesWithinRadius.filter((store) => store !== null);
+        // newStore.sort((a, b) => a.distance - b.distance);
+        const storesWithinRadius = stores.reduce((acu, store) => {
           const distance = calculateDistanceInMiles(userCoordinate, {
             lat: store.lat,
             lng: store.lng,
           });
           if (distance <= 5) {
-            return {
+            acu.push({
               ...store,
               distance,
-            };
+            });
           }
-          return null;
-        });
-        const newStore = storesWithinRadius.filter((store) => store !== null);
-        newStore.sort((a, b) => a.distance - b.distance);
-
-        setNearestStores(newStore);
+          return acu;
+        }, []);
+        storesWithinRadius.sort((a, b) => a.distance - b.distance);
+        setNearestStores(storesWithinRadius);
       }
     } catch (error) {
       console.log(error);
@@ -103,42 +117,23 @@ function SearchStore() {
 
   return (
     <div className="searchcontainer">
-      <h1>Find Restaurants Within 5 Miles</h1>
-      <input
-        type="text"
-        placeholder="Your address"
-        id="autocomplete-input"
-        value={userLocation}
-        onChange={(e) => setUserLocation(e.target.value)}
-      />
-      <button onClick={handleUserLocationInput}>Find</button>
-      {isLoading && <p>Loading...</p>}
-
-      {nearestStores.length > 0 ? (
-        // Content to display after clicking the button (list of stores, etc.)
-        <div className="searchrestaurant">
-          <h2>find a nearest restaurant</h2>
-          <ul>
-            {nearestStores.map((store, index) => (
-              <li key={index}>
-                <p>Name: {store.Name}</p>
-                <p>Address: {store.Address}</p>
-                <p>
-                  {/* Distance:{" "}
-                  {calculateDistanceInMiles(userCoordinates, {
-                    lat: store.lat,
-                    lng: store.lng,
-                  }).toFixed(2)}{" "} */}
-                  Distance:{" " + store.distance.toFixed(2)}
-                  miles
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : (
-        resultMessage && <p>No result within 5 miles</p>
-      )}
+      <div className="search-restaurant">
+        <h1>FIND YOUR NEAREST ASIA VILLA</h1>
+        <input
+          type="text"
+          placeholder="Your address"
+          id="autocomplete-input"
+          value={userLocation}
+          onChange={(e) => setUserLocation(e.target.value)}
+        />
+        <button onClick={handleUserLocationInput}>🔍</button>
+        {isLoading && <p>Loading...</p>}
+        <SearchByList
+          nearestStores={nearestStores}
+          resultMessage={resultMessage}
+          userLocation={userLocation}
+        />
+      </div>
     </div>
   );
 }
