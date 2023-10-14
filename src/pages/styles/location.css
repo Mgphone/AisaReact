@@ -1,113 +1,168 @@
-.location-container{
+.location-container {
   display: flex;
   flex-direction: row;
 }
-.searchcontainer{
-  padding-top: 17vh;
+
+.searchcontainer {
+  padding: 17vh 3vw;
   width: 40vw;
-  /* padding:0 2vw; */
-  padding-left: 2vw;
-  padding-right:2vw;
- }
-.staticMap img{
-  padding-top: 17vh;
+  background-color: #f2f2f2;
+  overflow-y: auto;
+  height: 100vh;
+  text-align: center;
+}
+
+.staticMap img {
   display: block;
-  width:60vw;
-  margin:0;
-  /* width: 50%;
-  height: 50%; */
- /* margin: 0 auto; */
- /* width: 100vw;
- height: 100vh; */
- /* filter:grayscale(80%); */
-
+  width: 60vw;
+  height: 100vh;
+  margin: 0;
 }
-.search-restaurant{
-  text-align: left;
 
+.noresult {
+  color: #777;
+  font-size: 0.8em;
 }
-.search-restaurant h1{
-  font-weight:bolder;
+
+.searchcontainer h1 {
+  font-weight: 600;
   line-height: 1em;
+  font-size: 1.8em;
 }
-.search-restaurant input{
+
+.searchcontainer input {
   width: 15vw;
   height: 8vh;
-  font-size: larger;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  border-radius: 3px;
 }
-.search-restaurant button{
+
+.searchcontainer button {
   height: 8vh;
   width: 4vw;
-  background-color:#e5007e;
-
+  background-color: #e5007e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.search-restaurant button:hover{
+
+.searchcontainer button:hover {
   background-color: #f13ea0;
 }
-.result-restaurant{
-  overflow: scroll;
-  height: 50vh;
+
+.storecard {
+  background-color: #fff;
+  margin: 2vh;
+  line-height: 1.4;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* .searchstore{
-  padding-bottom: 15vh;
- height: 30vh;
- width: 100vw;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- gap:10px;
- font-size: 2em;
-} */
+.storecard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
 
-@media (max-width:600px) {
-  .location-container{
+.openclose {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #e5007e;
+}
+
+.storecard .direction_button, .storecard .deliveroo {
+  width: 90%;
+  height: 10vh;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 2vh 0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.storecard .direction_button {
+  background-color: #fff
+}
+
+.storecard .deliveroo {
+  background-color: #fff
+}
+
+.storecard .a {
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 600px) {
+  .location-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
- }
-  .searchcontainer{
-   padding-top: 10vh;
-   width: 80vw;
-   height: 100%;
-
+    align-items: center;
+    margin: 0 auto;
   }
-  .staticMap img{
+
+  .searchcontainer {
+    padding-top: 10vh;
+    width: 80vw;
+  }
+
+  .staticMap img {
     display: none;
-    
   }
-  .search-restaurant{
-    padding: 0;
 
+  .mobileimage img {
+    width: 80vw;
+    height: 30vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    /* text-align: center; */
-  
+  .searchcontainer h1 {
+    font-size: 1.8em;
+    line-height: 1.2;
+    text-align: center;
   }
-  .search-restaurant h1{
-    font-size:1.5em;
-    /* font-weight: 300; */
-    line-height: 1em;
-  }
-  .search-restaurant input{
-    width:50vw;
+
+  .searchcontainer input {
+    width: 70%;
     height: 15vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
   }
-  .search-restaurant button{
-    width: 13vw;
+
+  .searchcontainer button {
+    width: 25%;
     height: 15vw;
+    background-color: #e5007e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
-  .result-restaurant{
+
+  .searchcontainer button:hover {
+    background-color: #f13ea0;
+  }
+
+  .result-restaurant {
     overflow: visible;
     margin-bottom: 20vh;
-    /* min-height: calc(100vh - (header height + main padding + footer padding)); */
-    /* min-height: 100vh; */
   }
-  /* footer{
-    margin-top: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-  
-  } */
+
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
 }

@@ -14,7 +14,8 @@ function Location() {
         <SearchStore />
         <StaticMap locations={stores} />
       </div>
-      {/* <Footer /> */}
+
+      <Footer />
     </div>
   );
 }

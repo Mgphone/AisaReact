@@ -1,20 +1,3 @@
-// import React from "react";
-// import "./styles/order.css";
-// // import Logo from "/Photos/Asia Villa-1.png";
-// function Order() {
-//   return (
-//     <div className="order">
-//       <div className="middleimage">
-//         <img src="/Photos/Asia Villa-1.png" alt="Logo" />
-//       </div>
-//       <div className="addresscontainer">
-
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Order;
 import React from "react";
 import "./styles/order.css";
 import Nav from "../Component/NavBar/Nav";
@@ -23,8 +6,6 @@ import store from "../Services/store";
 // import { Link } from "react-router-dom";
 function Order() {
   const handleLinkClick = (link) => {
-    // alert(`Clicked on ${link} I Know what you are trying🫵😂`);
-    // <Link to={link}></Link>;
     window.location.href = `${link}`;
   };
 
