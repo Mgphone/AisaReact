@@ -2,7 +2,7 @@ const stores = [
   {
     No: 2,
     Name: "BOROUGH",
-    Address: "302 Borough High Street, Borough, London SE1 1JJ",
+    Address: "302 Borough High Street, Borough, London, SE1 1JJ",
     Link: "https://deliveroo.co.uk/menu/london/borough/asia-villa-borough-high-street",
     tel: "02074075301",
     Opening: "10.00AM",
@@ -35,7 +35,7 @@ const stores = [
   {
     No: 4,
     Name: "Romford",
-    Address: "19 Victoria Road, Romford RM1 2JT",
+    Address: "19 Victoria Road, Romford, RM1 2JT",
     Link: "https://deliveroo.co.uk/menu/London/hylands/asia-villa-romford",
     tel: "01708500705",
     Opening: "10.00AM",
@@ -46,7 +46,7 @@ const stores = [
   {
     No: 6,
     Name: "Wood Green",
-    Address: "462 Lordship Lane Wood Green, London N17 7QY",
+    Address: "462 Lordship Lane Wood Green, London, N17 7QY",
     Link: "https://deliveroo.co.uk/menu/London/downhills-park-tower-garden-estate/asia-villa",
     tel: "02088856176",
     Opening: "10.00AM",
@@ -57,7 +57,7 @@ const stores = [
   {
     No: 5,
     Name: "Angel",
-    Address: "379 St John St, London EC1V 4LD",
+    Address: "379 St John St, London, EC1V 4LD",
     Link: "https://deliveroo.co.uk/menu/london/angel/asia-villa-st-john-street",
     tel: "02078372880",
     Opening: "12.00PM",

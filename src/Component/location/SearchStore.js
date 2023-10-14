@@ -13,17 +13,29 @@ function SearchStore() {
   const api = process.env.REACT_APP_GOOGLE_API_KEY;
   useEffect(() => {
     const inputElement = document.getElementById("autocomplete-input");
-
+    //change for uk only
+    const options = {
+      types: ["(cities)"],
+      componentRestrictions: { country: "uk" },
+    };
     if (inputElement) {
       setNearestStores([]);
       const autoComplete = new window.google.maps.places.Autocomplete(
-        inputElement
+        inputElement,
+        options
       );
       autoComplete.addListener("place_changed", () => {
         const place = autoComplete.getPlace();
-        setUserLocation(place.formatted_address);
+        if (place && place.formatted_address) {
+          handleUserLocationInput(place.formatted_address);
+        }
+        // setUserLocation(place.formatted_address);
+
+        // updateResult(place.formatted_address);
       });
+
       setAutocomplete(autoComplete);
+      // handleUserLocationInput(userLocation);
     }
   }, []);
 
@@ -51,15 +63,14 @@ function SearchStore() {
 
     return distanceInMiles;
   };
-  const handleUserLocationInput = async () => {
+  const handleUserLocationInput = async (location) => {
     setIsLoading(true);
     setNearestStores([]);
-
     try {
       const timestamp = new Date().getTime();
 
       const geoLocationResponse = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${userLocation}&key=${api}&timestamp=${timestamp}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${api}&timestamp=${timestamp}`
       );
       if (!geoLocationResponse.ok) {
         throw new Error("Geocoding requested failed");
@@ -111,10 +122,18 @@ function SearchStore() {
       setIsLoading(false);
     }
     if (nearestStores.length === 0) {
-      setResultMessage(false);
+      setResultMessage(true);
     }
   };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      // setUserLocation(e.target.value);
+      let location = e.target.value;
+      e.preventDefault();
 
+      handleUserLocationInput(location);
+    }
+  };
   return (
     <div className="searchcontainer">
       <div className="search-restaurant">
@@ -125,8 +144,11 @@ function SearchStore() {
           id="autocomplete-input"
           value={userLocation}
           onChange={(e) => setUserLocation(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
-        <button onClick={handleUserLocationInput}>🔍</button>
+        <button onClick={() => handleUserLocationInput(userLocation)}>
+          🔍
+        </button>
         {isLoading && <p>Loading...</p>}
         <SearchByList
           nearestStores={nearestStores}

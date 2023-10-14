@@ -62,15 +62,52 @@
 } */
 
 @media (max-width:600px) {
+  .location-container{
+    display: flex;
+    justify-content: center;
+ }
   .searchcontainer{
    padding-top: 10vh;
-   /* width:100vw; */
+   width: 80vw;
+   height: 100%;
+
   }
   .staticMap img{
-    /* width: 100vw; */
-    padding-top: 10vh;
-    /* width:60vw; */
-    /* filter:grayscale(80%) */
+    display: none;
+    
   }
+  .search-restaurant{
+    padding: 0;
+
+
+    /* text-align: center; */
   
+  }
+  .search-restaurant h1{
+    font-size:1.5em;
+    /* font-weight: 300; */
+    line-height: 1em;
+  }
+  .search-restaurant input{
+    width:50vw;
+    height: 15vw;
+  }
+  .search-restaurant button{
+    width: 13vw;
+    height: 15vw;
+  }
+  .result-restaurant{
+    overflow: visible;
+    margin-bottom: 20vh;
+    /* min-height: calc(100vh - (header height + main padding + footer padding)); */
+    /* min-height: 100vh; */
+  }
+  /* footer{
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+  
+  } */
 }
