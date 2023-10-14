@@ -48,12 +48,12 @@ function SearchByList({ nearestStores, userLocation, resultMessage }) {
           <>
             {" "}
             <span className="openclose">Open Now</span>
-            <span>-Close in {finalCloseTime}</span>
+            <span>Close in {finalCloseTime}</span>
           </>
         ) : (
           <>
             <span className="openclose">Close </span>
-            <span>-Open in {finalOpenTime}</span>
+            <span>Open in {finalOpenTime}</span>
           </>
         )}
       </div>

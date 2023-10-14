@@ -137,15 +137,19 @@ function SearchStore() {
   return (
     <div className="searchcontainer">
       <h1>FIND YOUR NEAREST ASIA VILLA</h1>
-      <input
-        type="text"
-        placeholder="Your address"
-        id="autocomplete-input"
-        value={userLocation}
-        onChange={(e) => setUserLocation(e.target.value)}
-        onKeyDown={handleKeyDown}
-      />
-      <button onClick={() => handleUserLocationInput(userLocation)}>🔍</button>
+      <div className="searchsticky">
+        <input
+          type="text"
+          placeholder="Your address"
+          id="autocomplete-input"
+          value={userLocation}
+          onChange={(e) => setUserLocation(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        <button onClick={() => handleUserLocationInput(userLocation)}>
+          🔍
+        </button>
+      </div>
       {isLoading && <p>Loading...</p>}
       <SearchByList
         nearestStores={nearestStores}
