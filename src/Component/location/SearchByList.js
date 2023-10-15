@@ -65,11 +65,11 @@ function SearchByList({ nearestStores, userLocation, resultMessage }) {
       {nearestStores.length > 0 ? (
         <div className="result-restaurant">
           {nearestStores.length === 1 ? (
-            <p>
+            <p className="resultstorelist">
               {nearestStores.length} Location near your {userLocation}
             </p>
           ) : (
-            <p>
+            <p className="resultstorelist">
               {nearestStores.length} Locations near your {userLocation}
             </p>
           )}
@@ -98,8 +98,10 @@ function SearchByList({ nearestStores, userLocation, resultMessage }) {
                 </a>
 
                 <OpenColseTime open={store.Opening} close={store.Closing} />
-                <p className="telephone">
-                  📞:<a href="tel:{store.tel}">{store.tel}</a>
+                <p className="telephone ">
+                  <a href="tel:{store.tel}" className="no-underline">
+                    📞:{store.tel}
+                  </a>
                 </p>
 
                 <button className="direction_button">
@@ -109,6 +111,7 @@ function SearchByList({ nearestStores, userLocation, resultMessage }) {
                     )},${encodeURIComponent(store.lng)}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="no-underline"
                   >
                     GET DIRECTION
                   </a>

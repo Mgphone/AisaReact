@@ -10,12 +10,12 @@ function Dietary({ handleVegan, isVegan }) {
           checked={isVegan}
           onChange={handleVegan}
           onlabel="On"
-          onstyle="primary"
+          onstyle="danger"
           size="sm"
         />
         <label>Vegan</label>
-        <BootStrapSwitchButton />
-        <label>Vegetarian</label>
+        {/* <BootStrapSwitchButton />
+        <label>Vegetarian</label> */}
       </div>
     </div>
   );
