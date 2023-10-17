@@ -29,7 +29,7 @@ function Order() {
         </div>
         {storeSorted.map((item, index) => (
           <div
-            key={item.index}
+            key={index}
             className="linkContainerStyle"
             onClick={() => handleLinkClick(item.Link)}
           >

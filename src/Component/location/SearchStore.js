@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import stores from "../../Services/store";
-import { FaAccusoft } from "react-icons/fa";
 import SearchByList from "./SearchByList";
+import { BsSearch } from "react-icons/bs";
+import { BiCurrentLocation } from "react-icons/bi";
 
 function SearchStore() {
   const [userLocation, setUserLocation] = useState("");
@@ -64,6 +65,7 @@ function SearchStore() {
     return distanceInMiles;
   };
   const handleUserLocationInput = async (location) => {
+    console.log("this is handle function" + location);
     setIsLoading(true);
     setNearestStores([]);
     try {
@@ -82,6 +84,10 @@ function SearchStore() {
       const userCoordinate = geoCodingData.results[0].geometry.location;
       if (!userCoordinate) {
         throw new Error("Invalid address or location not found.");
+      }
+      if (geoCodingData.status === "OK") {
+        const nearestArea = geoCodingData.results[0].formatted_address;
+        setUserLocation(nearestArea);
       }
       setUserCoordinates(userCoordinate);
       if (userCoordinate) {
@@ -134,20 +140,39 @@ function SearchStore() {
       handleUserLocationInput(location);
     }
   };
+  const getUserLocation = () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const newLocation = `${latitude}, ${longitude}`;
+        handleUserLocationInput(newLocation);
+        setUserLocation(newLocation);
+      });
+    }
+  };
   return (
     <div className="searchcontainer">
       <h1>FIND YOUR NEAREST ASIA VILLA</h1>
       <div className="searchsticky">
         <input
           type="text"
-          placeholder="Your address"
+          placeholder="Plese Enter Your Place"
           id="autocomplete-input"
           value={userLocation}
           onChange={(e) => setUserLocation(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <button onClick={() => handleUserLocationInput(userLocation)}>
-          🔍
+        <button
+          className="buttonsearch"
+          onClick={() => handleUserLocationInput(userLocation)}
+        >
+          {/* 🔍 */}
+          <BsSearch />
+        </button>
+
+        <button onClick={getUserLocation}>
+          <BiCurrentLocation />
         </button>
       </div>
       {isLoading && <p>Loading...</p>}
@@ -155,6 +180,7 @@ function SearchStore() {
         nearestStores={nearestStores}
         resultMessage={resultMessage}
         userLocation={userLocation}
+        userCoordinate={userCoordinates}
       />
     </div>
   );

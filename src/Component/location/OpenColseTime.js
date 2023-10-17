@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function OpenColseTime({ storeBusiness }) {
   const [buisnessHourOpen, setBusinessHourOpen] = useState("");

@@ -19,7 +19,7 @@ a,p{
   width: 40vw;
   background-color: #f2f2f2;
   overflow-y: auto;
-  height: 100vh;
+  height: 90vh;
   text-align: left;
 }
 .searchcontainer h1 {
@@ -28,7 +28,7 @@ a,p{
   font-size: 1.8em;
 }
 .searchcontainer input {
-  width: 15vw;
+  width: 20vw;
   height: 8vh;
   font-size: 1.2em;
   border: 1px solid #ccc;
@@ -49,7 +49,11 @@ a,p{
 .searchcontainer button:hover {
   background-color: #f13ea0;
 }
-
+.searchsticky{
+  display: flex;
+  flex-direction: row;
+  gap:2px;
+}
 
 .searchsticky{
   text-align: center;
@@ -207,9 +211,9 @@ width: 20vw;
 }
 
   .mobileimage img {
-    width: 80vw;
+    width: 95vw;
     height: 30vh;
-    margin: 0 auto;
+    margin: 2 auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
