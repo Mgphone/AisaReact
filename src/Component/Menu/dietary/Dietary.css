@@ -1,9 +1,12 @@
 
 .Dietary {
-  width: 100%;
-  background-color: black;
+  width: 11%;
+  background-color: #444242;
   color: white;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -14,4 +17,12 @@
 
 .Dietary .switch label {
   font-size: 1em;
+  color: green;
+  font-weight: bold;
+text-transform: uppercase;}
+
+@media (max-width:600px) {
+  .Dietary{
+    width: 50%;
+  }
 }

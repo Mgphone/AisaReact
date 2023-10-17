@@ -29,7 +29,7 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
       {/* <h1>{activeCategory}</h1> */}
       {/* <div className="food_cards"> */}
 
-      <div className="menu_foodcards">
+      <div className="menu_foodcards" id="menu_foodcards">
         {Object.entries(groupedMenu).length === 0 ? (
           <div className="food_card">
             <h5>🙏</h5>

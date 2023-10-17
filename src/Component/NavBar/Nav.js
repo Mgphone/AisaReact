@@ -11,9 +11,9 @@ function Nav() {
         </NavLink>
       </div>
       <div className="tabs">
-        <NavLink to="/" activeClassName="active">
+        {/* <NavLink to="/" activeClassName="active">
           Home
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/menu" activeClassName="active">
           Menu
         </NavLink>
