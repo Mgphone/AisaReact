@@ -21,9 +21,6 @@ function Nav() {
         <NavLink to="/order" activeClassName="active">
           <button>Order</button>
         </NavLink>
-        <NavLink to="/tocheck" activeClassName="active">
-          Sans
-        </NavLink>
       </div>
     </nav>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../Component/NavBar/Nav";
 import Footer from "../Component/footer/Footer";
 import StaticMap from "../Component/location/StaticMap";

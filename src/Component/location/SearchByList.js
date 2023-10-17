@@ -1,65 +1,7 @@
 import React, { useState } from "react";
-
+import ReplaceAddress from "./ReplaceAddress";
+import OpenColseTime from "./OpenColseTime";
 function SearchByList({ nearestStores, userLocation, resultMessage }) {
-  const ReplaceAddress = ({ address }) => {
-    const parts = address.split(",");
-    const firstPart = parts.shift().trim();
-    const secondPart = parts[parts.length - 1].trim();
-    return (
-      <p className="address">
-        {firstPart}, {secondPart}
-      </p>
-    );
-  };
-  const OpenColseTime = ({ open, close }) => {
-    const openSplit = open.split(".");
-    const openValue = parseFloat(openSplit[0] * 60) + parseFloat(openSplit[1]);
-    const closeSplit = close.split(".");
-    const closeValue =
-      parseFloat(closeSplit[0] * 60) + parseFloat(closeSplit[1]);
-    //const date=new Date()
-    const currentTime = new Date().toLocaleTimeString("en-GB", {
-      hour12: false,
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    // console.log(currentTime);
-    const currentTimeSplit = currentTime.split(":");
-    const currentTimeValue =
-      parseFloat(currentTimeSplit[0] * 60) + parseFloat(currentTimeSplit[1]);
-    // const checkCloseTime = closeValue - currentTimeValue;
-    const checkCloseTimeHour = Math.floor((closeValue - currentTimeValue) / 60);
-    const checkCLoseTimeMinute = (closeValue - currentTimeValue) % 60;
-    const finalCloseTime =
-      checkCloseTimeHour.toString().padStart(2, "0") +
-      ":" +
-      checkCLoseTimeMinute.toString().padStart(2, "0");
-    const checkOpenTimeHour = Math.floor((openValue - currentTimeValue) / 60);
-    const checkOpenTimeMinute = (openValue - currentTimeValue) % 60;
-
-    const finalOpenTime =
-      checkOpenTimeHour.toString().padStart(2, "0") +
-      ":" +
-      checkOpenTimeMinute.toString().padStart(2, "0");
-
-    return (
-      <div>
-        {currentTimeValue >= openValue && currentTimeValue <= closeValue ? (
-          <>
-            {" "}
-            <span className="openclose">Open Now</span>
-            <span>Close in {finalCloseTime}</span>
-          </>
-        ) : (
-          <>
-            <span className="openclose">Close </span>
-            <span>Open in {finalOpenTime}</span>
-          </>
-        )}
-      </div>
-    );
-  };
-
   return (
     <>
       {nearestStores.length > 0 ? (
@@ -97,7 +39,12 @@ function SearchByList({ nearestStores, userLocation, resultMessage }) {
                   <ReplaceAddress address={store.Address} />
                 </a>
 
-                <OpenColseTime open={store.Opening} close={store.Closing} />
+                <OpenColseTime
+                  // open={store.Opening}
+                  // close={store.Closing}
+                  storeBusiness={store.BuisnessHour}
+                />
+                {/* <OpenColseTime store={store.BuisnessHour} /> */}
                 <p className="telephone ">
                   <a href="tel:{store.tel}" className="no-underline">
                     📞:{store.tel}
