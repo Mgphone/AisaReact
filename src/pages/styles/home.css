@@ -1,23 +1,27 @@
+
 body{
   background-color:black;
-  color:#cfcf;
-  
 }
-.overlay-text{
-  font-size: large;
-  opacity: 0.4;
+.home_welcome{
+  filter: grayscale(80%);
 }
-.overlay-text:hover{
-  font-size: 3em;
-  opacity: 1;
+.home-overlay-text{
+  position: relative;
+  top:50;
+  left:50;
 }
-.centered-image {
+/* .overlay-text{
+  display: none;
+ 
+} */
+
+/* .centered-image {
   max-width: 100%;
   max-height: 100%;
   position: absolute;
   object-fit: fill;
   top: 0;
  bottom: 0;
- /* filter: grayscale(20%); */
+ filter: grayscale(20%);
 
-}
+} */

@@ -12,11 +12,10 @@ function Home() {
         className={"home_welcome"}
       />
 
-      <div className="overlay-text">
-        <h1>Fun Fact</h1>
-        Why did the tomato turn red at the restaurant? Because it saw the salad
-        dressing! 🍅😄
+      <div className="home-overlay-text">
+        <h1>Discover the Riches of Asian Cuisine</h1>
       </div>
+      <hr />
       <Footer />
     </>
   );

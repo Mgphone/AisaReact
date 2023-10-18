@@ -48,6 +48,11 @@ function Menu() {
     <div className="menu">
       <Nav />
       <Welcome imageUrl="/Images/welcomeasia.png" className="centered-image" />
+      <div className="menu-overlay-text">
+        <a href="#menu_foodcards">
+          <h1>Our Menu</h1>
+        </a>
+      </div>
       <AutoHiddendiv
         handleVegan={handleVegan}
         isVegan={isVegan}

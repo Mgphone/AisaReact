@@ -13,17 +13,17 @@
   max-width: 100%;
   max-height: 100%;
   position: absolute;
-  object-fit:none;
+  object-fit:fill;
   top: 0;
  bottom: 0;
 }
 /*This is for home image*/
-.home_welcome{
+/* .home_welcome{
 filter: grayscale(70%);
-}
+} */
 
 
-.overlay-text {
+.menu-overlay-text {
   position: absolute;
   top: 48%;
   left: 50%;
@@ -32,18 +32,21 @@ filter: grayscale(70%);
   color: white;
 }
 
-.overlay-text h1 {
+.menu-overlay-text h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 4rem;
+  opacity: 0.4;
+  font-style: italic;
+  color: white;
+ 
 }
-/* .overlay-text button{
-  font-size: 3rem;
-  background-color: #e5007e;
-  border-radius: 10%;
+.menu-overlay-text a{
+  text-decoration: none;
 }
-.overlay-text button:hover{
-  background-color: #ef66ad
-} */
+.menu-overlay-text h1:hover{
+  opacity: 1;
+}
+
 
 

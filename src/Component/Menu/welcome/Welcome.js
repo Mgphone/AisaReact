@@ -13,9 +13,6 @@ function Welcome(props) {
         width="100%"
         height="100%"
       />
-      <div className="overlay-text">
-        <h1>Our Menu</h1>
-      </div>
     </div>
   );
 }

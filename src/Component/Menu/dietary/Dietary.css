@@ -1,18 +1,18 @@
 
 .Dietary {
-  width: 11%;
-  background-color: #444242;
+  /* width: 30%; */
+  /* background:linear-gradient(black); */
+  background-color: black;
   color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  /* align-items: center;
+  overflow: visible; */
 }
 
 
 .Dietary .switch {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .Dietary .switch label {
@@ -21,8 +21,8 @@
   font-weight: bold;
 text-transform: uppercase;}
 
-@media (max-width:600px) {
+ /* @media (max-width:600px) {
   .Dietary{
-    width: 50%;
+    width: 30%;
   }
-}
+}  */
