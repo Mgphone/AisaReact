@@ -16,11 +16,11 @@ function Order() {
       <Nav />
       <div className="order">
         <div className="image-container">
-          <img
+          {/* <img
             className="image1"
             src="/Photos/Asia Villa-1.png"
             alt="Background"
-          />
+          /> */}
           <img
             className="image2"
             src="/Photos/deliveroo-brought.png"
