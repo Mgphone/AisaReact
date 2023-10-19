@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeCards from "../Component/Home/HomeCards";
 import Nav from "../Component/NavBar/Nav";
 import Footer from "../Component/footer/Footer";
 import Welcome from "../Component/Menu/welcome/Welcome";
+// import item from "/Images/30102023.jpg";
+import HomePopUp from "../Component/Home/HomePopUp";
 
 import "./styles/home.css";
+import { useEffect } from "react";
 
 function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
+  const handlePopClose = () => {
+    setIsOpen(false);
+  };
   return (
     <>
       <Nav />
@@ -14,7 +24,12 @@ function Home() {
         imageUrl={"/Images/PHOTO-2021-10-26-11-35-13 (1).jpg"}
         className={"home_welcome"}
       />
-
+      <HomePopUp
+        onclose={handlePopClose}
+        isOpen={isOpen}
+        clickOutside={true}
+        setIsOpen={setIsOpen}
+      />
       <div className="home-overlay-text">
         <h1>"Discover the Riches of Asian Cuisine"</h1>
       </div>

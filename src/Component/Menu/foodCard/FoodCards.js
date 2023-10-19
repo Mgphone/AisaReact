@@ -4,19 +4,9 @@ import CutWord from "./cutWord/CutWord";
 import Popup from "./Popup";
 
 const FoodCards = ({ groupedMenu, activeCategory }) => {
-  // console.log(Object.entries(groupedMenu).length);
-  // console.log("Active Category " + activeCategory);
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [toggleOpen.settoggleOpen]=useState('')
-  // const [openItem, setOpenItem] = useState(null);
-  // console.log(openItem);
-
   const [isOpen, setIsOpen] = useState(false);
   const [popupData, setPopupData] = useState("");
-  //testing for title
-  // const handleclick = (item) => {
-  //   alert("You click " + item.title);
-  // };
+
   const openPopup = (item) => {
     setPopupData(item);
     setIsOpen(true);
@@ -26,9 +16,6 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
   };
   return (
     <>
-      {/* <h1>{activeCategory}</h1> */}
-      {/* <div className="food_cards"> */}
-
       <div className="menu_foodcards" id="menu_foodcards">
         {Object.entries(groupedMenu).length === 0 ? (
           <div className="food_card">
