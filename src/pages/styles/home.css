@@ -144,15 +144,23 @@ background-color: white;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(19, 17, 17, 0.1); 
+  background-color: rgba(114, 95, 95, 0.4); 
   z-index: 1;
   display: flex;
   justify-content: center; 
   align-items: center;
 }
+.homepopup img{
+  width: 40vw;
+  height: 80vh;
+}
 
 
 @media screen and (max-width:900px) {
+  .homepopup img{
+    width: 50vw;
+    height: 70vh;
+  }
   .home-overlay-text h1{
     font-size: 1.5em;
   }
@@ -178,6 +186,10 @@ background-color: white;
 }
 
 @media screen and (max-width:600px){
+  .homepopup img{
+    width: 60vw;
+    height:60vh;
+  }
   .home-cards{
     grid-template-columns: 1fr;
   }
