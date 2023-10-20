@@ -152,13 +152,16 @@ background-color: white;
   
 }
 .homepopup img{
-  width: 40vw;
-  height: 80vh;
+  width: 100%;
+  height: 100%;
+}
+.homeimagecontainer{
+  position: relative;
 }
 .homeclosebutton {
   position: absolute;
-  top: 10%;
-  left: 65%;
+  top: 10px;
+  left: 10px;
   font-size: 2em;
   cursor: pointer;
   opacity: 0.5;
@@ -169,14 +172,15 @@ background-color: white;
 
 
 @media screen and (max-width:900px) {
-  .homepopup img{
+   .homepopup img{
     width: 50vw;
     height: 70vh;
   }
+  /*
   .homeclosebutton {
     position: absolute;
     top: 15%;
-    left: 70%;}
+    left: 70%;} */
   .home-overlay-text h1{
     font-size: 1.5em;
   }
@@ -206,10 +210,10 @@ background-color: white;
     width: 60vw;
     height:50vh;
   }
-  .homeclosebutton {
+  /* .homeclosebutton {
     position: absolute;
     top: 25%;
-    left: 70%;}
+    left: 70%;} */
   .home-cards{
     grid-template-columns: 1fr;
   }

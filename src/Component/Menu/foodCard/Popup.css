@@ -49,12 +49,14 @@ p:hover{
 }
  .popup_vegan{
   background-color: green;
-  max-width: 6vw;
+  max-width: 7vw;
   transform: rotate(-5deg);
   margin-bottom: 1vh;
 }
 .description{
   padding-bottom: 2vh;
+  width: 70vw;
+  margin: 0 auto;
 }
 
 .close-button {

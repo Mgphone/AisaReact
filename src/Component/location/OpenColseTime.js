@@ -44,8 +44,10 @@ function OpenColseTime({ storeBusiness }) {
     checkCloseTimeHour.toString().padStart(2, "0") +
     ":" +
     checkCLoseTimeMinute.toString().padStart(2, "0");
-  const checkOpenTimeHour = Math.floor((currentTimeValue - openValue) / 60);
-  const checkOpenTimeMinute = (currentTimeValue - openValue) % 60;
+  const checkOpenTimeHour = Math.abs(
+    Math.floor((currentTimeValue - openValue) / 60)
+  );
+  const checkOpenTimeMinute = Math.abs((currentTimeValue - openValue) % 60);
 
   const finalOpenTime =
     checkOpenTimeHour.toString().padStart(2, "0") +
