@@ -13,7 +13,7 @@ function HomeCards() {
     <div className="home-cards">
       <div className="home-search">
         <FaLocationDot className="icon" />
-        <h1>find your local AsiaVilla</h1>
+        <h1>Find Your Local AsiaVilla</h1>
         <hr />
         <p>
           Discover an array of dining options in your desired areas, explore
@@ -21,19 +21,6 @@ function HomeCards() {
           enjoy dining experiences with us.
         </p>
         <NavLink to="/location">
-          <button>Search</button>
-        </NavLink>
-      </div>
-      <div className="home-menu">
-        <MdOutlineRestaurantMenu className="icon" />
-        <h1>Discover Our Culinary Offerings</h1>
-        <hr />
-        <p>
-          Our website showcases an enticing restaurant menu, offering a
-          delectable array of culinary delights. Explore our dishes, flavors,
-          and satisfy your cravings experience.
-        </p>
-        <NavLink to="/menu">
           <button>Search</button>
         </NavLink>
       </div>
@@ -48,6 +35,19 @@ function HomeCards() {
         </p>
 
         <button onClick={scrollToStory}>Search</button>
+      </div>
+      <div className="home-menu">
+        <MdOutlineRestaurantMenu className="icon" />
+        <h1>Discover Our Culinary Offerings</h1>
+        <hr />
+        <p>
+          Our website showcases an enticing restaurant menu, offering a
+          delectable array of culinary delights. Explore our dishes, flavors,
+          and satisfy your cravings experience.
+        </p>
+        <NavLink to="/menu">
+          <button>Search</button>
+        </NavLink>
       </div>
     </div>
   );

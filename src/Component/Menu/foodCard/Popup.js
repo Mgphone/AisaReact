@@ -34,7 +34,7 @@ function Popup({ isOpen, item, closePopup, clickOutside }) {
               />
             )}
             {item.vegan ? <p className="popup_vegan">Vegan</p> : ""}
-            <p>{item.description}</p>
+            <p class="description">{item.description}</p>
             <button className="close-button" onClick={closePopup}>
               X
             </button>

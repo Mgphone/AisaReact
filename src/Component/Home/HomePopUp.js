@@ -29,10 +29,12 @@ function HomePopUp({ isOpen, onclose, clickOutside, setIsOpen }) {
     <>
       {isOpen && (
         <div className="homepopup" onClick={handleClose}>
-          <img src="/Images/30102023.jpg" alt="discount display" />
-          <button className="close-button" onClick={onclose}>
-            CLose
-          </button>
+          <div className="homeimagecontainer">
+            <img src="/Images/30102023.jpg" alt="discount display" />
+            <button className="homeclosebutton" onClick={onclose}>
+              X
+            </button>
+          </div>
         </div>
       )}
     </>

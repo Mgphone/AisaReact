@@ -44,12 +44,14 @@ function Home() {
         <h1>Our Story</h1>
         <div className="storryteller">
           <div className="story-context">
-            <span className="story-red">BACK IN 1991</span> OUR FOUNDER & HEAD
-            CHEF, SAYA KYI RIN, CREATED OUR REVOLUNTINORY MENU OFFERNG DICHES
-            FROM THE REGION OF THAILAND, BURMA, JAPAN, MALAYSIA & VIETNAM. THESE
-            LEMONGRASS GROWING COUNTRIES SHARE MANY COMMON FRESH HERBS & SPICES
-            ALLOWING THESE CUISINES TO HAPPILY MINGLE & FUSE WITH EACH OTHER ON
-            THE SAME DINING TABLE
+            <q>
+              <span className="story-red">BACK IN 1991</span> OUR FOUNDER & HEAD
+              CHEF, SAYA KYI RIN, CREATED OUR REVOLUNTINORY MENU OFFERNG DICHES
+              FROM THE REGION OF THAILAND, BURMA, JAPAN, MALAYSIA & VIETNAM.
+              THESE LEMONGRASS GROWING COUNTRIES SHARE MANY COMMON FRESH HERBS &
+              SPICES ALLOWING THESE CUISINES TO HAPPILY MINGLE & FUSE WITH EACH
+              OTHER ON THE SAME DINING TABLE
+            </q>
           </div>
           <div className="story-image">
             <img src="/Images/ourstory.jpg" alt="our story display" />
