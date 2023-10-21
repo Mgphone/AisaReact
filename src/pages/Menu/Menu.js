@@ -3,10 +3,9 @@ import data from "../../data/data";
 import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
 import Welcome from "../../Component/welcome/Welcome";
 import Footer from "../../Component/footer/Footer";
-// import Nav from "../../Component/navBar/Nav";
-import Nav from "../../Component/navBar/Nav";
 import FoodCards from "./foodCard/FoodCards";
 import "./Menu.css";
+import Nav from "../../Component/navBar/Nav";
 // import item from "../assets/Images/welcomeasia.png";
 
 function Menu() {
