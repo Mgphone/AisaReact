@@ -4,7 +4,6 @@ import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
 import Welcome from "../../Component/welcome/Welcome";
 import Footer from "../../Component/footer/Footer";
 // import Nav from "../../Component/navBar/Nav";
-import Nav from "../../Component/navBar/Nav";
 import FoodCards from "./foodCard/FoodCards";
 import "./Menu.css";
 // import item from "../assets/Images/welcomeasia.png";
@@ -49,7 +48,7 @@ function Menu() {
 
   return (
     <div className="menu">
-      <Nav />
+      {/* <Nav /> */}
       <Welcome
         imageUrl={require("../../assets/Images/welcomeasia.png")}
         className="centered-image"
