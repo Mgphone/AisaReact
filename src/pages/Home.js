@@ -3,7 +3,7 @@ import HomeCards from "../Component/Home/HomeCards";
 import Nav from "../Component/NavBar/Nav";
 import Footer from "../Component/footer/Footer";
 import Welcome from "../Component/Menu/welcome/Welcome";
-// import item from "/Images/30102023.jpg";
+import item from "../assets/Images/PHOTO-2021-10-26-11-35-13 (1).jpg";
 import HomePopUp from "../Component/Home/HomePopUp";
 
 import "./styles/home.css";
@@ -21,8 +21,10 @@ function Home() {
     <>
       <Nav />
       <Welcome
-        imageUrl={"/Images/PHOTO-2021-10-26-11-35-13 (1).jpg"}
-        className={"home_welcome"}
+        containerClassName="home-menu-container"
+        imageUrl={item}
+        className="home_welcome"
+        alt="home-alt"
       />
       <HomePopUp
         onclose={handlePopClose}
@@ -54,7 +56,10 @@ function Home() {
             </q>
           </div>
           <div className="story-image">
-            <img src="/Images/ourstory.jpg" alt="our story display" />
+            <img
+              src={require("../assets/Images/ourstory.jpg")}
+              alt="our story display"
+            />
           </div>
         </div>
       </div>

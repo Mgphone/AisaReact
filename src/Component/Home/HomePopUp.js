@@ -30,7 +30,10 @@ function HomePopUp({ isOpen, onclose, clickOutside, setIsOpen }) {
       {isOpen && (
         <div className="homepopup" onClick={handleClose}>
           <div className="homeimagecontainer">
-            <img src="/Images/30102023.jpg" alt="discount display" />
+            <img
+              src={require("../../assets/Images/30102023.jpg")}
+              alt="discount display"
+            />
             <button className="homeclosebutton" onClick={onclose}>
               X
             </button>

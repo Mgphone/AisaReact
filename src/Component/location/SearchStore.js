@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import stores from "../../Services/store";
+import stores from "../../data/store";
 import SearchByList from "./SearchByList";
 import { BsSearch } from "react-icons/bs";
 import { BiCurrentLocation } from "react-icons/bi";

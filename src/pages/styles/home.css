@@ -2,12 +2,15 @@
 body {
   background-color: black;
 }
-
+.home-menu-container{
+  height: 100vh;
+  width: 100vw;
+}
 .home_welcome {
-  filter: grayscale(80%);
+  filter: grayscale(10%);
 }
 
-.home-overlay-text {
+.home-overlay-text,.home-description {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -24,13 +27,14 @@ body {
 
 .home-overlay-text h1 {
   font-size: 2em;
-  width: 70vw;
+  width: 50vw;
 }
 
 .homelogo img {
+  display: none;
   height: 25vh;
   width: 10vw;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -39,12 +43,13 @@ body {
   height: 20vh;
   width: 50vw;
   text-transform: uppercase;
-  color:white;
+  /* color:white; */
   font-size: 1.3em;
-  position:absolute;
+  top:70%;
+  /* position:absolute;
   bottom: 15%;
-  left:25%;
-  line-height: 1.5em;
+  left:20%;
+  line-height: 1.5em; */
 
 }
 .home-cards{

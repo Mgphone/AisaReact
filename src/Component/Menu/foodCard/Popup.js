@@ -25,11 +25,15 @@ function Popup({ isOpen, item, closePopup, clickOutside }) {
             <h1>{item.title}</h1>
             {/* <img src={item.image} alt={item.image} /> */}
             {item.image ? (
-              <img src={item.image} alt={item.title} />
+              <img
+                // src={item.image}
+                src={require(`../../../assets${item.image}`)}
+                alt={item.title}
+              />
             ) : (
               <img
                 className="noimage"
-                src="/Photos/noimage.jpg"
+                src={require("../../../assets/Photos/noimage.jpg")}
                 alt={item.title}
               />
             )}

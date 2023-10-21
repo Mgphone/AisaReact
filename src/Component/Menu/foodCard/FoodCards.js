@@ -59,9 +59,18 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                     <div className="food_card_image">
                       {/* <img src={item.image} alt={item.title} /> */}
                       {item.image ? (
-                        <img src={item.image} alt={item.title} />
+                        <img
+                          // src={item.image}
+                          // src={require("../../../assets"+{item.image})`}
+                          src={require(`../../../assets${item.image}`)}
+                          alt={item.title}
+                        />
                       ) : (
-                        <img src="/Photos/noimage.jpg" alt={item.title} />
+                        <img
+                          // src={require(`../../../assets"/Photos/noimage.jpg"`)}
+                          src={require("../../../assets/Photos/noimage.jpg")}
+                          alt={item.title}
+                        />
                       )}
                     </div>
                   </button>

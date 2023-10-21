@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/order.css";
 import Nav from "../Component/NavBar/Nav";
 import Footer from "../Component/footer/Footer";
-import store from "../Services/store";
+import store from "../data/store";
 // import { Link } from "react-router-dom";
 function Order() {
   const handleLinkClick = (link) => {

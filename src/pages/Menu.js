@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import data from "../Services/data";
+import data from "../data/data";
 import AutoHiddendiv from "../Component/Menu/autohiddendiv/AutoHiddendiv";
 import Welcome from "../Component/Menu/welcome/Welcome";
 import Footer from "../Component/footer/Footer";
 import Nav from "../Component/NavBar/Nav";
 import FoodCards from "../Component/Menu/foodCard/FoodCards";
+// import item from "../assets/Images/welcomeasia.png";
 
 function Menu() {
   const [menuItems, setMenuItem] = useState(data);
@@ -47,7 +48,12 @@ function Menu() {
   return (
     <div className="menu">
       <Nav />
-      <Welcome imageUrl="/Images/welcomeasia.png" className="centered-image" />
+      <Welcome
+        imageUrl={require("../assets/Images/welcomeasia.png")}
+        className="centered-image"
+        containerClassName="welcome-menu-container"
+        alt="welcome-menu-alt"
+      />
       <div className="menu-overlay-text">
         <a href="#menu_foodcards">
           <h1>Our Menu</h1>
