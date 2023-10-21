@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "../../Component/navBar/Nav";
+import Nav from "../../Component/NavBar/Nav";
 import Footer from "../../Component/footer/Footer";
 import StaticMap from "./StaticMap";
 import stores from "../../data/store";

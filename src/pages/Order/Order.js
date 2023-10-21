@@ -1,6 +1,6 @@
 import React from "react";
 import "./order.css";
-import Nav from "../../Component/navBar/Nav";
+import Nav from "../../Component/NavBar/Nav";
 import Footer from "../../Component/footer/Footer";
 import store from "../../data/store";
 // import { Link } from "react-router-dom";

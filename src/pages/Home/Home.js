@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HomeCards from "./HomeCards";
-import Nav from "../../Component/navBar/Nav";
+import Nav from "../../Component/NavBar/Nav";
 import Footer from "../../Component/footer/Footer";
 import Welcome from "../../Component/welcome/Welcome";
 import item from "../../assets/Images/PHOTO-2021-10-26-11-35-13 (1).jpg";
