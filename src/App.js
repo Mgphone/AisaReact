@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.css";
 import { Route, Routes } from "react-router-dom";
-import Menu from "./pages/Menu";
-import Home from "./pages/Home";
-import Order from "./pages/Order";
-import Location from "./pages/Location";
+import Menu from "./pages/Menu/Menu";
+import Home from "./pages/Home/Home";
+import Order from "./pages/Order/Order";
+import Location from "./pages/Location/Location";
 export default function App() {
   return (
     <Routes>

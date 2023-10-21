@@ -1,0 +1,373 @@
+/* middle image */
+.welcome-menu-container {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 15vh;
+}
+/* .welcome-menu-container img{
+  
+object-fit:contain;
+} */
+.menu-overlay-text {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+  /* color: white; */
+}
+.menu-overlay-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 4rem;
+  opacity: 0.4;
+  font-style: italic;
+  color: white;
+ 
+}
+.menu-overlay-text a{
+  text-decoration: none;
+}
+.menu-overlay-text h1:hover{
+  opacity: 1;
+}
+/* autohiddendiv */
+.stickyMenu{
+  position: sticky;
+  top:15vh;
+  background-color: transparent;
+  z-index: 1;
+}
+/* category bar */
+.categories {
+  width: 100%;
+  overflow: hidden;
+}
+
+.button-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.button-default {
+  background-color: #ccc;
+  padding: 1vh 2vh;
+  border-radius: 10%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.button-default:hover {
+  background-color: #999;
+  transform: scale(1.05);
+}
+
+.button-active {
+  background-color: #e5007e;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-active:hover {
+  background-color: #ff007e;
+  transform: scale(1.25);
+}
+/* Dietary bar */
+.Dietary {
+ 
+  background-color: black;
+  color: white;
+  display: grid;
+
+}
+
+
+.Dietary .switch {
+  display: flex;
+}
+
+.Dietary .switch label {
+  font-size: 1em;
+  color: green;
+  font-weight: bold;
+text-transform: uppercase;}
+.menu_foodcards{
+  margin: 0 auto;
+  text-align: center;
+  
+}
+.food_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2vw;
+  padding: 1vw;
+  overflow: hidden;
+}
+.category{
+  position:fixed;
+  top:25vh;
+}
+.food_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  border:1px solid white;
+  border-radius: 20px;
+}
+.food_card:hover{
+  transform: translateY(-5px);
+}
+.food_card_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  color:white;
+  flex-grow: 1;
+}
+
+.Vegan {
+  height: 1.5em;
+  width: 3.5em;
+  font-size: 1em;
+  background-color: green;
+  display: flex; /* Use flexbox for centering within the .food_card_text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 3px;
+  transform: rotate(-5deg);
+  margin-right: 2vw;
+}
+
+
+.food_card_text .something{
+  height: 1.5em;
+  width: 1.5em;
+  
+}
+
+.food_card:hover {
+  transform: translateY(-5px); 
+}
+
+
+.food_card_title {
+  line-height: 1em;
+  margin: 0;
+  color:#ff5733;
+}
+
+.food_card_image img {
+  width: 250px; 
+  border-radius: 20%;
+  /* max-width: 70%; */
+  /* height: auto;  */
+}
+.contains{
+  color: #bbb;
+}
+
+/* .food_card button{
+  background-color: #e5007e;
+  width: 15vw;
+  height: 5vh;
+  color: white;
+  margin: 1em 0;
+  border-radius: 10%;
+}
+.food_card button:hover{
+  background-color: #ef66ad
+} */
+@media only screen and (max-width:600px){
+
+/* Base styles for the food card */
+
+.food_card {
+  display: flex;
+  flex-direction: row;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid white;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the food card */
+.food_card:hover {
+  transform: scale(1.05); /* Enlarge the card slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+/* Style for the food card image */
+.food_card_image img {
+  width: 100px; /* Set a fixed width for the image */
+  height: 100px; /* Set a fixed height for the image */
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+}
+
+/* Style for the food card text container */
+.food_card_text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  color: white;
+  text-align: left;
+}
+
+/* Style for the Vegan label */
+.Vegan {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Style for the Non-Vegan label */
+.something {
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+/* Additional styling for the rest of the food card content */
+.food_card h2 {
+  font-size: 1.2em;
+  margin: 0;
+  color:#ff5733;
+  line-height: 1em;
+}
+
+.food_card h5 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.food_card p {
+  margin: 0;
+}
+}
+/* .food_card button {
+  background-color: #e5007e;
+height: 5vh;
+ 
+  width: 20vw;
+  
+}
+
+.food_card button:hover {
+  background-color: #ef66ad;
+} */
+
+/* Add more styles as needed for your specific design */
+
+/* popup for food cards */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(178, 221, 243, 0.5); 
+  z-index: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+/* .pop-active{
+  opacity: 0.3;
+} */
+.popup-content {
+  background-color: white;
+  /* padding: 20px; */
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  max-width: 80%; 
+  text-align: center; 
+  position: relative;
+  color:black;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  line-height: 1em;
+}
+
+.popup-content img {
+  max-width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+.popup-content img:hover {
+  transform: scale(1.1);
+}
+
+
+p {
+  font-size: 1em;
+}
+p:hover{
+  transform: scale(1.03);
+}
+ .popup_vegan{
+  background-color: green;
+  max-width: 7vw;
+  transform: rotate(-5deg);
+  margin-bottom: 1vh;
+}
+.description{
+  padding-bottom: 2vh;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+
+.close-button:hover {
+  color: red; 
+}
+@media only screen and (max-width:600px){
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  .popup-content img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  .popup_vegan{
+    max-width: 15vw;
+  }
+}

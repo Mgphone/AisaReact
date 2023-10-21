@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Popup.css";
+// import "./Popup.css";
 function Popup({ isOpen, item, closePopup, clickOutside }) {
   useEffect(() => {
     const keyPress = (e) => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FoodCards.css";
+// import "./FoodCards.css";
 import CutWord from "./cutWord/CutWord";
 import Popup from "./Popup";
 

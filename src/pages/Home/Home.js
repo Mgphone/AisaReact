@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import HomeCards from "../Component/Home/HomeCards";
-import Nav from "../Component/NavBar/Nav";
-import Footer from "../Component/footer/Footer";
-import Welcome from "../Component/Menu/welcome/Welcome";
-import item from "../assets/Images/PHOTO-2021-10-26-11-35-13 (1).jpg";
-import HomePopUp from "../Component/Home/HomePopUp";
-
-import "./styles/home.css";
+import HomeCards from "./HomeCards";
+import Nav from "../../Component/navBar/Nav";
+import Footer from "../../Component/footer/Footer";
+import Welcome from "../../Component/welcome/Welcome";
+import item from "../../assets/Images/PHOTO-2021-10-26-11-35-13 (1).jpg";
+import HomePopUp from "./HomePopUp";
+import "./home.css";
 import { useEffect } from "react";
 
 function Home() {
@@ -57,7 +56,7 @@ function Home() {
           </div>
           <div className="story-image">
             <img
-              src={require("../assets/Images/ourstory.jpg")}
+              src={require("../../assets/Images/ourstory.jpg")}
               alt="our story display"
             />
           </div>
