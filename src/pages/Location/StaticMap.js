@@ -1,18 +1,23 @@
 import React from "react";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 function StaticMap({ locations }) {
-  const isMobile = window.innerWidth <= 600;
-
-  const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
-  const zoom = 10;
-  const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?zoom=${zoom}&maptype=roadmap&size=500x300&scale=2&${locations
-    .map((loc) => `markers=label:${loc.Name.charAt(0)}|${loc.lat},${loc.lng}`)
-    .join("&")}&key=${apiKey}`;
+  const defaultCenter = {
+    lat: 51.5074, // London's latitude
+    lng: -0.1878, // London's longitude
+  };
 
   return (
-    <div className={isMobile ? "mobileimage" : "staticMap"}>
-      <img src={mapUrl} alt="static Map" />
-    </div>
+    <>
+      Test
+      <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
+        {/* <LoadScript> */}
+        <GoogleMap
+          className="staticmap-container"
+          center={defaultCenter}
+        ></GoogleMap>
+      </LoadScript>
+    </>
   );
 }
 

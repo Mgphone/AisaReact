@@ -12,33 +12,33 @@ function SearchStore() {
   const [autocomplete, setAutocomplete] = useState(null);
   const [resultMessage, setResultMessage] = useState(false);
   const api = process.env.REACT_APP_GOOGLE_API_KEY;
-  useEffect(() => {
-    const inputElement = document.getElementById("autocomplete-input");
-    //change for uk only
-    const options = {
-      types: ["(cities)"],
-      componentRestrictions: { country: "uk" },
-    };
-    if (inputElement) {
-      setNearestStores([]);
-      const autoComplete = new window.google.maps.places.Autocomplete(
-        inputElement,
-        options
-      );
-      autoComplete.addListener("place_changed", () => {
-        const place = autoComplete.getPlace();
-        if (place && place.formatted_address) {
-          handleUserLocationInput(place.formatted_address);
-        }
-        // setUserLocation(place.formatted_address);
+  // useEffect(() => {
+  //   const inputElement = document.getElementById("autocomplete-input");
+  //   //change for uk only
+  //   const options = {
+  //     types: ["(cities)"],
+  //     componentRestrictions: { country: "uk" },
+  //   };
+  //   if (inputElement) {
+  //     setNearestStores([]);
+  //     const autoComplete = new window.google.maps.places.Autocomplete(
+  //       inputElement,
+  //       options
+  //     );
+  //     autoComplete.addListener("place_changed", () => {
+  //       const place = autoComplete.getPlace();
+  //       if (place && place.formatted_address) {
+  //         handleUserLocationInput(place.formatted_address);
+  //       }
+  //       // setUserLocation(place.formatted_address);
 
-        // updateResult(place.formatted_address);
-      });
+  //       // updateResult(place.formatted_address);
+  //     });
 
-      setAutocomplete(autoComplete);
-      // handleUserLocationInput(userLocation);
-    }
-  }, []);
+  //     setAutocomplete(autoComplete);
+  //     // handleUserLocationInput(userLocation);
+  //   }
+  // }, []);
 
   const calculateDistanceInMiles = (location1, location2) => {
     const lat1 = location1.lat;

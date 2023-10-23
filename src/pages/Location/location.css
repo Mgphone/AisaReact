@@ -15,6 +15,21 @@ a,p{
   height: 100vh;
   margin: 0;
 }
+/* This is for static Container Map */
+.staticmap-container{
+  display: block;
+  width: 60vw;
+  height: 100vh;
+  margin:0;
+}
+/* for marker */
+/* Custom CSS for the marker label */
+.markerLabel{
+  font-family: 'Your Font', sans-serif;
+  font-size: 16px;
+  color: #FF0000; /* Red color */
+  /* Add any other styles as needed */
+}
 
 .searchcontainer {
   /* padding: 17vh 3vw; */
