@@ -3,13 +3,14 @@ import stores from "../../data/store";
 import SearchByList from "./SearchByList";
 import { BsSearch } from "react-icons/bs";
 import { BiCurrentLocation } from "react-icons/bi";
-
+import MapWithAutoComplete from "./MapWithAutoComplete";
+import calculateDistanceInMiles from "./calculateDistanceInMiles";
 function SearchStore() {
   const [userLocation, setUserLocation] = useState("");
   const [nearestStores, setNearestStores] = useState([]);
   const [userCoordinates, setUserCoordinates] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [autocomplete, setAutocomplete] = useState(null);
+  // const [autocomplete, setAutocomplete] = useState(null);
   const [resultMessage, setResultMessage] = useState(false);
   const api = process.env.REACT_APP_GOOGLE_API_KEY;
   // useEffect(() => {
@@ -40,32 +41,32 @@ function SearchStore() {
   //   }
   // }, []);
 
-  const calculateDistanceInMiles = (location1, location2) => {
-    const lat1 = location1.lat;
-    const lon1 = location1.lng;
-    const lat2 = location2.lat;
-    const lon2 = location2.lng;
+  // const calculateDistanceInMiles = (location1, location2) => {
+  //   const lat1 = location1.lat;
+  //   const lon1 = location1.lng;
+  //   const lat2 = location2.lat;
+  //   const lon2 = location2.lng;
 
-    const R = 6371; // Radius of the Earth in kilometers.
-    const dLat = (lat2 - lat1) * (Math.PI / 180);
-    const dLon = (lon2 - lon1) * (Math.PI / 180);
+  //   const R = 6371; // Radius of the Earth in kilometers.
+  //   const dLat = (lat2 - lat1) * (Math.PI / 180);
+  //   const dLon = (lon2 - lon1) * (Math.PI / 180);
 
-    const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(lat1 * (Math.PI / 180)) *
-        Math.cos(lat2 * (Math.PI / 180)) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
+  //   const a =
+  //     Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+  //     Math.cos(lat1 * (Math.PI / 180)) *
+  //       Math.cos(lat2 * (Math.PI / 180)) *
+  //       Math.sin(dLon / 2) *
+  //       Math.sin(dLon / 2);
 
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const distanceInKilometers = R * c;
+  //   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  //   const distanceInKilometers = R * c;
 
-    const distanceInMiles = distanceInKilometers * 0.621371;
+  //   const distanceInMiles = distanceInKilometers * 0.621371;
 
-    return distanceInMiles;
-  };
+  //   return distanceInMiles;
+  // };
   const handleUserLocationInput = async (location) => {
-    console.log("this is handle function" + location);
+    // console.log("this is handle function" + location);
     setIsLoading(true);
     setNearestStores([]);
     try {
@@ -151,6 +152,7 @@ function SearchStore() {
       });
     }
   };
+
   return (
     <div className="searchcontainer">
       <h1>FIND YOUR NEAREST ASIA VILLA</h1>
@@ -163,6 +165,11 @@ function SearchStore() {
           onChange={(e) => setUserLocation(e.target.value)}
           onKeyDown={handleKeyDown}
         />
+        <MapWithAutoComplete
+          setNearestStores={setNearestStores}
+          handleUserLocationInput={handleUserLocationInput}
+        />
+        ;
         <button
           className="buttonsearch"
           onClick={() => handleUserLocationInput(userLocation)}
@@ -170,7 +177,6 @@ function SearchStore() {
           {/* 🔍 */}
           <BsSearch />
         </button>
-
         <button onClick={getUserLocation}>
           <BiCurrentLocation />
         </button>

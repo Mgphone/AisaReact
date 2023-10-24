@@ -10,11 +10,11 @@ import "./location.css";
 function Location() {
   return (
     <div>
-      {/* <Nav /> */}
+      <Nav />
       <div className="location-container">
         <SearchStore />
-        {/* <StaticMap locations={stores} /> */}
-        <MapContainer />
+        <StaticMap locations={stores} />
+        {/* <MapContainer /> */}
       </div>
 
       <Footer />

@@ -16,7 +16,9 @@ const MapContainer = () => {
 
   return (
     // <LoadScript googleMapsApiKey={myApikey} />
-    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
+    <LoadScript
+    // googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}
+    >
       <div className="staticmap-container">
         <GoogleMap
           mapContainerStyle={mapStyles}
@@ -28,7 +30,12 @@ const MapContainer = () => {
             <Marker
               key={item.No}
               position={{ lat: item.lat, lng: item.lng }}
-              label={{ text: item.Name + " Asia Villa", color: "blue" }}
+              label={{
+                text: item.Name + " Asia Villa",
+                color: "#e5007e",
+                fontWeight: "bold",
+                fontSize: "14px",
+              }}
               options={{
                 className: "markerLabel",
               }}
