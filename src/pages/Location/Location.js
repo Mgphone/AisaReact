@@ -7,6 +7,9 @@ import SearchStore from "./SearchStore";
 import "./location.css";
 
 function Location() {
+  console.log(
+    "This is log from location JS " + process.env.REACT_APP_GOOGLE_API_KEY
+  );
   return (
     <div>
       <Nav />

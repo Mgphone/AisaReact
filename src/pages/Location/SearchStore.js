@@ -30,13 +30,9 @@ function SearchStore() {
         if (place && place.formatted_address) {
           handleUserLocationInput(place.formatted_address);
         }
-        // setUserLocation(place.formatted_address);
-
-        // updateResult(place.formatted_address);
       });
 
       setAutocomplete(autoComplete);
-      // handleUserLocationInput(userLocation);
     }
   }, []);
 
