@@ -65,10 +65,10 @@ function SearchStore() {
     setIsLoading(true);
     setNearestStores([]);
     try {
-      const timestamp = new Date().getTime();
+      // const timestamp = new Date().getTime();
 
       const geoLocationResponse = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${api}&timestamp=${timestamp}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${api}`
       );
       if (!geoLocationResponse.ok) {
         throw new Error("Geocoding requested failed");
@@ -129,13 +129,19 @@ function SearchStore() {
   };
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      // setUserLocation(e.target.value);
-      let location = e.target.value;
       e.preventDefault();
 
-      handleUserLocationInput(location);
+      // Trim any leading/trailing whitespace
+      let location = userLocation;
+      // console.log("this is for enter function" + location);
+      // Check if location is not empty
+      if (location !== "") {
+        setUserLocation(location);
+        handleUserLocationInput(location);
+      }
     }
   };
+
   const getUserLocation = () => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function (position) {
@@ -161,7 +167,11 @@ function SearchStore() {
         />
         <button
           className="buttonsearch"
-          onClick={() => handleUserLocationInput(userLocation)}
+          onClick={() => {
+            if (userLocation !== undefined) {
+              handleUserLocationInput(userLocation);
+            }
+          }}
         >
           {/* 🔍 */}
           <BsSearch />
