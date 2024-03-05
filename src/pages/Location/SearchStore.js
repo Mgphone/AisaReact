@@ -87,21 +87,6 @@ function SearchStore() {
       }
       setUserCoordinates(userCoordinate);
       if (userCoordinate) {
-        // const storesWithinRadius = stores.map((store) => {
-        //   const distance = calculateDistanceInMiles(userCoordinate, {
-        //     lat: store.lat,
-        //     lng: store.lng,
-        //   });
-        //   if (distance <= 5) {
-        //     return {
-        //       ...store,
-        //       distance,
-        //     };
-        //   }
-        //   return null;
-        // });
-        // const newStore = storesWithinRadius.filter((store) => store !== null);
-        // newStore.sort((a, b) => a.distance - b.distance);
         const storesWithinRadius = stores.reduce((acu, store) => {
           const distance = calculateDistanceInMiles(userCoordinate, {
             lat: store.lat,
@@ -133,8 +118,6 @@ function SearchStore() {
 
       // Trim any leading/trailing whitespace
       let location = userLocation;
-      // console.log("this is for enter function" + location);
-      // Check if location is not empty
       if (location !== "") {
         setUserLocation(location);
         handleUserLocationInput(location);
