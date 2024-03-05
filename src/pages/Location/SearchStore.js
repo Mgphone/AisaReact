@@ -19,21 +19,22 @@ function SearchStore() {
       types: ["(cities)"],
       componentRestrictions: { country: "uk" },
     };
-    if (inputElement) {
-      setNearestStores([]);
-      const autoComplete = new window.google.maps.places.Autocomplete(
-        inputElement,
-        options
-      );
-      autoComplete.addListener("place_changed", () => {
-        const place = autoComplete.getPlace();
-        if (place && place.formatted_address) {
-          handleUserLocationInput(place.formatted_address);
-        }
-      });
+    // console.log("This is inputElement" + inputElement);
+    // if (inputElement) {
+    //   setNearestStores([]);
+    //   const autoComplete = new window.google.maps.places.Autocomplete(
+    //     inputElement,
+    //     options
+    //   );
+    //   autoComplete.addListener("place_changed", () => {
+    //     const place = autoComplete.getPlace();
+    //     if (place && place.formatted_address) {
+    //       handleUserLocationInput(place.formatted_address);
+    //     }
+    //   });
 
-      setAutocomplete(autoComplete);
-    }
+    //   setAutocomplete(autoComplete);
+    // }
   }, []);
 
   const calculateDistanceInMiles = (location1, location2) => {
@@ -61,7 +62,7 @@ function SearchStore() {
     return distanceInMiles;
   };
   const handleUserLocationInput = async (location) => {
-    console.log("this is handle function" + location);
+    // console.log("this is handle function" + location);
     setIsLoading(true);
     setNearestStores([]);
     try {
