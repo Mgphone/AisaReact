@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import data from "../../data/data";
+// import data from "../../data/data";
+import newData from "../../data/newMenu";
+
 import AutoHiddendiv from "./autohiddendiv/AutoHiddendiv";
 import Welcome from "../../Component/welcome/Welcome";
 import Footer from "../../Component/footer/Footer";
@@ -9,10 +11,12 @@ import Nav from "../../Component/NavBar/Nav";
 // import item from "../assets/Images/welcomeasia.png";
 
 function Menu() {
+  const data = newData;
   const [menuItems, setMenuItem] = useState(data);
   const [activeCategory, setActiveCategory] = useState(menuItems);
   const [groupedMenu, setGroupedMenu] = useState({});
   const [isVegan, setIsVegan] = useState(false);
+  // const data = newData;
   // Effect to filter menu items based on isVegan and activeCategory
   useEffect(() => {
     const filteredData = data.filter((item) => {

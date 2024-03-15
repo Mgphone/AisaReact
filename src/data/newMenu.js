@@ -5,7 +5,7 @@ const newMenu = [
     description:
       "The excellence of our Salt & Pepper Chicken, They're then gently coated in a seasoned, Tender marinated chicken, lightly coated for a crispy, ' flavourful bite.'",
     category: "APPETISER 🥢",
-    image: "/Photos/salt&pepperchicken.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "gluten,soybeans,egg",
@@ -16,7 +16,7 @@ const newMenu = [
     description:
       "Crispy on the outside, A delightful fusion of crunch and garden-fresh flavours on the inside.",
     category: "APPETISER 🥢",
-    image: "/Photos/vegetablespringroll.jpg",
+    image: "",
     vegan: true,
     vegetarian: true,
     contains: "gluten,soybeans",
@@ -27,7 +27,7 @@ const newMenu = [
     description:
       "These vibrant green, vegan-friendly soya bean pods are seasoned with a delicate touch of sea-salt. A perfect blend of freshness and flavour awaits you.",
     category: "APPETISER 🥢",
-    image: "/Photos/edamame.jpg",
+    image: "",
     vegan: true,
     vegetarian: true,
     contains: "soybeans",
@@ -38,7 +38,7 @@ const newMenu = [
     description:
       "Crispy -fried to perfection and generously seasoned with a mouth-watering blend of garlic, five-spice, chili, onions, spring onions, salt, pepper, and bursting with vibrant Thai flavours.",
     category: "APPETISER 🥢",
-    image: "/Photos/thaichickenwings.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "gluten,milk,sesame,soybeans",
@@ -49,7 +49,7 @@ const newMenu = [
     description:
       "Savor the fusion of Korean-style sweet chili chicken-tender bites glazed for a perfect balance of spice and sweetness, topped with the freshness of spring onions.",
     category: "APPETISER 🥢",
-    image: "/Photos/sweetchillichicken.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "eggs,gluten,milk,sesame,soybeans",
@@ -60,7 +60,7 @@ const newMenu = [
     description:
       "Delight in our Chicken Gyoza with reveal a seasoned chicken filling that's savoury and satisfying with every bite. A must-try for gyoza enthusiasts.",
     category: "APPETISER 🥢",
-    image: "/Photos/chickengyoza.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "gluten,sesame,soybeans",
@@ -71,7 +71,7 @@ const newMenu = [
     description:
       "A delightful twist with tender, five-spice roasted duck With every bite, you'll encounter the perfect balance of crunch and rich, aromatic flavours.",
     category: "APPETISER 🥢",
-    image: "/Photos/duckspringroll.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "gluten,sesame,soybeans",
@@ -82,7 +82,7 @@ const newMenu = [
     description:
       "Crispy tempura perfection with succulent king prawns , choice for seafood enthusiasts and tempura connoisseurs.",
     category: "APPETISER 🥢",
-    image: "/Photos/prawntempura.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "gluten,crustaceans,sesame",
@@ -93,7 +93,7 @@ const newMenu = [
     description:
       "Adventure with our Salt & Pepper Calamari. These delectable morsels, crispy texture are generously tossed in a flavourful medley of salt, pepper, chili, and spring onions. Every bite offers a thrilling fusion.",
     category: "APPETISER 🥢",
-    image: "/Photos/salt&peppercalamari.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "eggs,molluscs,soybeans",
@@ -104,7 +104,7 @@ const newMenu = [
     description:
       "A harmonious blend of crispy, savoury perfection where succulent prawns and fragrant sesame seeds come together in a delightful appetize.",
     category: "APPETISER 🥢",
-    image: "/Photos/prawntoast.jpg",
+    image: "",
     vegan: false,
     vegetarian: false,
     contains: "gluten,sesame,soybeans",
@@ -115,7 +115,7 @@ const newMenu = [
     description:
       "Crispy and savoury deep-fried dumplings are generously filled with fresh vegetables and protein-rich soybeans, offering a mouth-watering fusion of taste and nutrition.",
     category: "APPETISER 🥢",
-    image: "/Photos/vegetablegyoza.jpg",
+    image: "",
     vegan: true,
     vegetarian: true,
     contains: "gluten,soybeans",
@@ -541,6 +541,7 @@ const newMenu = [
     id: 47,
     title: "Coke Can (330 ml)",
     category: "Soft Drinks",
+    description: "Soft Drinks 330ml",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -551,6 +552,7 @@ const newMenu = [
     id: 48,
     title: "Fanta Orange Can (330 ml)",
     category: "Soft Drinks",
+    description: "Soft Drinks 330ml",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -561,6 +563,7 @@ const newMenu = [
     id: 49,
     title: "Diet Coke Can (330 ml)",
     category: "Soft Drinks",
+    description: "Soft Drinks 330ml",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -571,6 +574,7 @@ const newMenu = [
     id: 50,
     title: "7UP Can (330 ml)",
     category: "Soft Drinks",
+    description: "Soft Drinks 330ml",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -581,6 +585,7 @@ const newMenu = [
     id: 51,
     title: "Still Water (330ml)",
     category: "Soft Drinks",
+    description: "Soft Drinks 330ml",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -591,6 +596,7 @@ const newMenu = [
     id: 52,
     title: "Sparkling Water (330ml)",
     category: "Soft Drinks",
+    description: "Soft Drinks 330ml",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -601,6 +607,7 @@ const newMenu = [
     id: 53,
     title: "Chilli Oil",
     category: "Extra Sauce",
+    description: "",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -610,7 +617,8 @@ const newMenu = [
   {
     id: 54,
     title: "Sweet Chilli Sauce",
-    category: "",
+    category: "Extra Sauce",
+    description: "",
     image: "",
     vegan: true,
     vegetarian: true,
@@ -621,6 +629,7 @@ const newMenu = [
     id: 55,
     title: "Soy Sauce",
     category: "Extra Sauce", // You can adjust the category if needed
+    description: "",
     image: "",
     vegan: true, // Note: Soy sauce may not be universally considered vegan due to potential filtering agents.
     vegetarian: true,
@@ -630,7 +639,8 @@ const newMenu = [
   {
     id: 56,
     title: "Crushed Peanuts",
-    category: "Toppings", // You can adjust the category if needed
+    category: "Extra Sauce", // You can adjust the category if needed
+    description: "",
     image: "",
     vegan: false, // Peanuts are not vegan.
     vegetarian: true,
