@@ -68,7 +68,7 @@ const FoodCards = ({ groupedMenu, activeCategory }) => {
                       ) : (
                         <img
                           // src={require(`../../../assets"/Photos/noimage.jpg"`)}
-                          src={require("../../../assets/Photos/noimage.jpg")}
+                          src={require("../../../assets/Images/noimage.jpg")}
                           alt={item.title}
                         />
                       )}

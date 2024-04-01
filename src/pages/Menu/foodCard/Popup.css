@@ -60,6 +60,12 @@ p:hover {
   margin-bottom: 1vh;
 }
 
+.popup_contains {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+}
+
 .description {
   padding-bottom: 2vh;
   width: 70vw;
