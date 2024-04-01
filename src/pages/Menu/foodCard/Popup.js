@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import "./Popup.css";
+import "./Popup.css";
 function Popup({ isOpen, item, closePopup, clickOutside }) {
   useEffect(() => {
     const keyPress = (e) => {
@@ -33,12 +33,20 @@ function Popup({ isOpen, item, closePopup, clickOutside }) {
             ) : (
               <img
                 className="noimage"
-                src={require("../../../assets/Photos/noimage.jpg")}
+                src={require("../../../assets/Images/noimage.jpg")}
                 alt={item.title}
               />
             )}
             {item.vegan ? <p className="popup_vegan">Vegan</p> : ""}
             <p class="description">{item.description}</p>
+            {item.contains ? (
+              <p className="popup_contains">
+                <h5>Options:</h5>
+                {item.contains}
+              </p>
+            ) : (
+              ""
+            )}
             <button className="close-button" onClick={closePopup}>
               X
             </button>

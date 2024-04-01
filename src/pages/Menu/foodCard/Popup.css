@@ -5,24 +5,27 @@
   left: 0;
   width: 100%;
   height: 100%;
+  /* background-color: rgba(178, 221, 243, 0.5); */
+  /* background-color: rgba(177, 177, 177, 1); */
 
-  background-color: rgba(178, 221, 243, 0.5); 
   z-index: 1;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
-/* .pop-active{
-  opacity: 0.3;
-} */
+
+.pop-active {
+  opacity: 1;
+}
+
 .popup-content {
   background-color: white;
   /* padding: 20px; */
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  max-width: 80%; 
-  text-align: center; 
+  max-width: 80%;
+  text-align: center;
   position: relative;
-  color:black;
+  color: black;
 }
 
 h1 {
@@ -36,6 +39,7 @@ h1 {
   height: 50%;
   border-radius: 50%;
 }
+
 .popup-content img:hover {
   transform: scale(1.1);
 }
@@ -44,16 +48,25 @@ h1 {
 p {
   font-size: 1em;
 }
-p:hover{
+
+p:hover {
   transform: scale(1.03);
 }
- .popup_vegan{
+
+.popup_vegan {
   background-color: green;
   max-width: 7vw;
   transform: rotate(-5deg);
   margin-bottom: 1vh;
 }
-.description{
+
+.popup_contains {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+}
+
+.description {
   padding-bottom: 2vh;
   width: 70vw;
   margin: 0 auto;
@@ -70,9 +83,10 @@ p:hover{
 
 
 .close-button:hover {
-  color: red; 
+  color: red;
 }
-@media only screen and (max-width:600px){
+
+@media only screen and (max-width:600px) {
   .close-button {
     position: absolute;
     top: 0;
@@ -81,12 +95,14 @@ p:hover{
     cursor: pointer;
     opacity: 0.5;
   }
+
   .popup-content img {
     max-width: 80%;
     height: auto;
     margin-bottom: 1em;
   }
-  .popup_vegan{
+
+  .popup_vegan {
     max-width: 15vw;
   }
 }

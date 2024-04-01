@@ -23,23 +23,23 @@ const stores = [
       },
     ],
   },
-  {
-    No: 1,
-    Name: "Upton Town",
-    Address: "409 Katherine Road, London, E7 8LT",
-    Link: "https://deliveroo.co.uk/menu/London/upton/asia-villa-upt",
-    tel: "02085524488",
-    lat: 51.54260363374026,
-    lng: 0.036935625412983814,
-    BuisnessHour: [
-      {
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
-        Opening: "11.00",
-        Closing: "22.00",
-      },
-      { days: ["Friday", "Saturday"], Opening: "11.00", Closing: "23.00" },
-    ],
-  },
+  // {
+  //   No: 1,
+  //   Name: "Upton Town",
+  //   Address: "409 Katherine Road, London, E7 8LT",
+  //   Link: "https://deliveroo.co.uk/menu/London/upton/asia-villa-upt",
+  //   tel: "02085524488",
+  //   lat: 51.54260363374026,
+  //   lng: 0.036935625412983814,
+  //   BuisnessHour: [
+  //     {
+  //       days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+  //       Opening: "11.00",
+  //       Closing: "22.00",
+  //     },
+  //     { days: ["Friday", "Saturday"], Opening: "11.00", Closing: "23.00" },
+  //   ],
+  // },
   {
     No: 3,
     Name: "Canary Wharf",
