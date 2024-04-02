@@ -22,7 +22,6 @@ function Popup({ isOpen, item, closePopup, clickOutside }) {
       {isOpen && (
         <div className="popup pop-active" onClick={handleBackground}>
           <div className="popup-content">
-            <h1>{item.title}</h1>
             {/* <img src={item.image} alt={item.image} /> */}
             {item.image ? (
               <img
@@ -37,12 +36,21 @@ function Popup({ isOpen, item, closePopup, clickOutside }) {
                 alt={item.title}
               />
             )}
+            <h1>{item.title}</h1>
             {item.vegan ? <p className="popup_vegan">Vegan</p> : ""}
             <p class="description">{item.description}</p>
             {item.contains ? (
               <p className="popup_contains">
-                <h5>Options:</h5>
+                <span className="popup-key"> Contains:</span>
                 {item.contains}
+              </p>
+            ) : (
+              ""
+            )}
+            {item.options ? (
+              <p>
+                <span className="popup-key">Options</span>
+                {item.options}
               </p>
             ) : (
               ""
